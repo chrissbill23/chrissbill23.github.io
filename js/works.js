@@ -130,6 +130,46 @@ document.addEventListener('DOMContentLoaded', function() {
 		  'topics':['Regression', 'Statistics', 'School Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/Data-Mining-Project-Felicita-Dataset-using-R\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
+	  "work10":{
+		  "title": "Application for Production management",
+		  "subtitle": "Software development, Internship Project, C++, Qt, PostgreSQL, Fast Fashion industry",
+		  "image": "https://www.just-iou.fr/wp-content/uploads/2020/03/webdesk_adv_1_1-3.jpg",
+		  "year": "July 2018 - September 2018",
+		   "imagedesc": "Imperial logo",
+		  "description": '<p>This work done for SOGEA S.R.L (visit https://www.sogeasoft.com/) during my internship was to develop an efficient desktop and tablet application for Imperial Fashion to manage their clothes production.</P>',
+		  'categories': ['Software development', 'Database management'],
+		  'topics':['Internship Project']
+	  },
+	  "work11":{
+		  "title": "Liceo Scientifico Richard Feynman (School IT System)",
+		  "subtitle": "Software development, C++, Qt, XML",
+		  "image": "https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman/blob/master/screenshot/Login.png?raw=true",
+		  "year": "May 2017 - July 2017",
+		   "imagedesc": "Application logo",
+		  'categories': ['Software development', 'Database management'],
+		  'topics':['School Project'],
+		  "description": "<a href=\"https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+	  },
+	  "work12":{
+		  "title": "VGoose",
+		  "subtitle": "Web development, Mongoose, Node.js, TypeScript",
+		  "image": "img/proj_logos/vgoose.png",
+		  "year": "September 2018 - ongoing",
+		   "imagedesc": "vgoose logo",
+		  'categories': ['Web development', 'Database management'],
+		  'topics':['Framework', 'Personal Project'],
+		  "description": "<a href=\"https://github.com/chrissbill23/VGoose\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+	  },
+	  "work13":{
+		  "title": "My Eventi (accessible website)",
+		  "subtitle": "Web development, PHP, HTML, Javascript, CSS, SQL",
+		  "image": "img/proj_logos/myeventi.png",
+		  "year": "June 2017 - September 2017",
+		   "imagedesc": "my eventi logo",
+		  'categories': ['Web development', 'Database management'],
+		  'topics':['School Project'],
+		  "description": "<a href=\"https://github.com/chrissbill23/My-Eventi-simple-accessible-web-site-\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+	  },
   };
   
 	//FUNCTIONS DEFINITION

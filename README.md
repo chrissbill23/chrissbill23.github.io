@@ -1,2 +1,2 @@
 # My personal website repo
-Visit it at <christianbile.com>
+Visit it at <http://christianbile.com>

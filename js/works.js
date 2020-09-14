@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "Amadeus company logo",
 		  "description": '<p>This work done for Amadeus S.A.S during my internship was addressing the challenge of finding the potential big travelers of an airline company, using machine learning and deep learning to predict the Customer Lifetime Value (CLV or LTV or CLTV) of the current passengers at a future point in time given as a parameter to the model.</P>',
 		  'categories': ['Artificial Intelligence', 'Data Science'],
-		  'topics':['Machine Learning', 'Deep Learning', 'Internship Project']
+		  'topics':['Machine Learning', 'Deep Learning', 'Internship Project','Job Projects']
 	  },
 	  "work2":{
 		  "title": "American Sign Language Recognition",
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "American Sign Language letters",
 		  "description": "<a href=\"https://github.com/marcogma/SignLanguageProject\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>",
 		  'categories': ['Artificial Intelligence'],
-		  'topics':['Deep Learning', 'Computer Vision','School Project']
+		  'topics':['Deep Learning', 'Computer Vision','School Project', 'Personal Project']
 	  },
 	  "work3":{
 		  "title": "Geodesic In Heat",
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "year": "February 2020 - March 2020",
 		   "imagedesc": "The Bipedal walker",
 		  'categories': ['Artificial Intelligence'],
-		  'topics':['Reinforcement Learning', 'School Project'],
+		  'topics':['Reinforcement Learning', 'School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/INF585-Reinforcement-Learning\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work5":{
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "year": "February 2020 - April 2020",
 		   "imagedesc": "Boid Fishes",
 		  'categories': ['Visual Computing'],
-		  'topics':['Computer Animation', 'School Project'],
+		  'topics':['Computer Animation', 'School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/BoidsFishes\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work7":{
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "year": "June 2018 - August 2018",
 		   "imagedesc": "The Simpsons detector",
 		  'categories': ['Artificial Intelligence'],
-		  'topics':['Machine Learning', 'Deep Learning', 'School Project'],
+		  'topics':['Machine Learning', 'Deep Learning', 'School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/The-Simpsons-Classifier\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work8":{
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "year": "June 2017 - August 2017",
 		   "imagedesc": "The Simpsons detector",
 		  'categories': ['Operational Research'],
-		  'topics':['Linear Programming','School Project'],
+		  'topics':['Linear Programming','School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/Maxi-pizza\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work9":{
@@ -138,19 +138,29 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "Imperial logo",
 		  "description": '<p>This work done for SOGEA S.R.L (visit https://www.sogeasoft.com/) during my internship was to develop an efficient desktop and tablet application for Imperial Fashion to manage their clothes production.</P>',
 		  'categories': ['Software development', 'Database management'],
-		  'topics':['Internship Project']
+		  'topics':['Internship Project','Job Projects']
 	  },
 	  "work11":{
+		  "title": "Software Developer at SOGEA S.R.L",
+		  "subtitle": "Software development, Job Experience, C++, Qt, PostgreSQL",
+		  "image": "https://www.sogeasoft.com/img/logo.png",
+		  "year": "September 2018 - September 2019",
+		   "imagedesc": "Sogeasoft logo",
+		  "description": '<p>Permanent job I had at SOGEA S.R.L (visit https://www.sogeasoft.com/) but quit to persue my MScT studies. During this job experience my main tasks were to develop efficient desktop applications and build management systems for customers of different industries.</P>',
+		  'categories': ['Software development', 'Database management'],
+		  'topics':['Job Projects']
+	  },
+	  "work12":{
 		  "title": "Liceo Scientifico Richard Feynman (School IT System)",
 		  "subtitle": "Software development, C++, Qt, XML",
 		  "image": "https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman/blob/master/screenshot/Login.png?raw=true",
 		  "year": "May 2017 - July 2017",
 		   "imagedesc": "Application logo",
 		  'categories': ['Software development', 'Database management'],
-		  'topics':['School Project'],
+		  'topics':['School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
-	  "work12":{
+	  "work13":{
 		  "title": "VGoose",
 		  "subtitle": "Web development, Mongoose, Node.js, TypeScript",
 		  "image": "img/proj_logos/vgoose.png",
@@ -160,14 +170,14 @@ document.addEventListener('DOMContentLoaded', function() {
 		  'topics':['Framework', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/VGoose\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
-	  "work13":{
+	  "work14":{
 		  "title": "My Eventi (accessible website)",
 		  "subtitle": "Web development, PHP, HTML, Javascript, CSS, SQL",
 		  "image": "img/proj_logos/myeventi.png",
 		  "year": "June 2017 - September 2017",
 		   "imagedesc": "my eventi logo",
 		  'categories': ['Web development', 'Database management'],
-		  'topics':['School Project'],
+		  'topics':['School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/My-Eventi-simple-accessible-web-site-\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
   };

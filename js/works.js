@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "year": "February 2020 - April 2020",
 		   "imagedesc": "Boid Fishes",
 		  'categories': ['Visual Computing'],
-		  'topics':['Computer Animation', 'School Project', 'Personal Project'],
+		  'topics':['Computer Animation','Computer Graphics', 'School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/BoidsFishes\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work7":{
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "year": "June 2018 - August 2018",
 		   "imagedesc": "The Simpsons detector",
 		  'categories': ['Artificial Intelligence'],
-		  'topics':['Machine Learning', 'Deep Learning', 'School Project', 'Personal Project'],
+		  'topics':['Machine Learning', 'Deep Learning', 'Computer Vision', 'School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/The-Simpsons-Classifier\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work8":{
@@ -180,6 +180,16 @@ document.addEventListener('DOMContentLoaded', function() {
 		  'topics':['School Project', 'Personal Project'],
 		  "description": "<a href=\"https://github.com/chrissbill23/My-Eventi-simple-accessible-web-site-\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
+	  "work15":{
+		  "title": "ImgUtils",
+		  "subtitle": "Deep Learning, Framework, Python",
+		  "image": "img/proj_logos/imgutils.png",
+		  "year": "April 2020 - current",
+		   "imagedesc": "img utils logo",
+		  'categories': ['Artificial Intelligence', 'Data Science'],
+		  'topics':['Framework','Computer Vision','Deep Learning', 'Personal Project'],
+		  "description": "<a href=\"https://github.com/chrissbill23/ImgUtils\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+	  }
   };
   
 	//FUNCTIONS DEFINITION

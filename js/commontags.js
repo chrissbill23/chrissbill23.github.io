@@ -46,7 +46,7 @@
                     '<div class="col-lg-8">'+
                         '<div class="lets_talk">'+
                             '<h3>Do you have any Project or Job Offer? <a href="#">Let’s Talk</a> </h3>'+
-                            '<p>I am available for any Machine Learning or Deep Learning project in parallel with my current studies, which include Teleworking and part-time jobs.</p><p> From March 2021, I will be available for an internship project of 6 months to conclude my Master studies.</p>'+
+                            '<p>I am available for any Machine Learning or Deep Learning project research job offer, full-time or (preferably) part-time.</p>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+

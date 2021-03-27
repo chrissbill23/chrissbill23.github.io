@@ -46,17 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "image": "https://www.tourmag.com/photo/art/grande/8334013-13054962.jpg?v=1444214835",
 		  "year": "April 2020 - August 2020",
 		   "imagedesc": "Amadeus company logo",
-		  "description": '<p>This work done for Amadeus S.A.S during my internship was addressing the challenge of finding the potential big travelers of an airline company, using machine learning and deep learning to predict the Customer Lifetime Value (CLV or LTV or CLTV) of the current passengers at a future point in time given as a parameter to the model.</P>',
+		  "description": '<p>This work done for Amadeus S.A.S during my internship was addressing the challenge of finding the potential big travelers of an airline company, using machine learning and deep learning to predict the Customer Lifetime Value (CLV or LTV or CLTV) of the current passengers at a future point parameter of the model.</P>',
 		  'categories': ['Artificial Intelligence', 'Data Science'],
 		  'topics':['Machine Learning', 'Deep Learning', 'Internship Project','Job Projects']
 	  },
 	  "work2":{
 		  "title": "American Sign Language Recognition",
-		  "subtitle": "Deep Learning, Python",
+		  "subtitle": "Computer Vision, Python",
 		  "image": "https://camo.githubusercontent.com/e66312310514b1385ef4e976d5cf34d161e190e4/68747470733a2f2f642e6e6577737765656b2e636f6d2f656e2f66756c6c2f313339343638362f61736c2d67657474792d696d616765732e6a7067",
 		  "year": "December 2019 - January 2020",
 		   "imagedesc": "American Sign Language letters",
-		  "description": "<a href=\"https://github.com/marcogma/SignLanguageProject\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>",
+		  "description": "<p>In this project, I coded a real-time translator of the American Sign Letters from a webcam input. This desktop application has a classifier that I have trained to do such task with a F1-score 0.93/1.0 </p><a href=\"https://github.com/marcogma/SignLanguageProject\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>",
 		  'categories': ['Artificial Intelligence'],
 		  'topics':['Deep Learning', 'Computer Vision','School Project', 'Personal Project']
 	  },
@@ -68,8 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "Geodesic In Heat on a bunny",
 		  'categories': ['Visual Computing'],
 		  'topics':['Computer Graphics', 'School Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/GeodesicInHeat\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>In this project I worked on the practical implementation of using heat method for computing geodesic distances for meshes and point clouds based on the research paper Geodesics in Heat: A New Approach to Computing Distance Based on Heat Flow by Keenan Crane [2013]. I have modified the equations for the gradient normalization and added two boundary conditions. </p><a href=\"https://github.com/chrissbill23/GeodesicInHeat\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
+
 	  "work4":{
 		  "title": "Bipedal Walker",
 		  "subtitle": "Reinforcement Learning Project, Python",
@@ -78,7 +79,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "The Bipedal walker",
 		  'categories': ['Artificial Intelligence'],
 		  'topics':['Reinforcement Learning', 'School Project', 'Personal Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/INF585-Reinforcement-Learning\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>With our project we try to analyze two environments of two different complexities and action space in order to catch up the parametrization of the training needed for an overall good result, by doing extensive parameter tunning and generating empirical simulations. The two environments are: Cart Pole and Bipedal Walker."+
+		  " The Cart Pole was analyzed using DQN and DQN-Experience Replay while the BipedalWalker was analyzed with the DDPG algorithm using an Actor-Critic agent and then using Augmented Random Search. For the first, We have found that parametrized implementations of these agents surpass their naive implementations. While for the Bipedal Walker, "+
+		  "we found out that more tunnings are needed for the DDPG to achieve a certain amount of steps of the Bipedal, but with the Augmented Random Search achieve much better results are obtained in less time.</p>"+
+		  "<p>For our experiments, we found on the internet the implementation of each agent algorithm analyzed in this project. We also extended these implementations to make them more suitable to our way of working, computational resources and goals. Thus, our project does not aim to implement those algorithms from scratch, but to analyze their training parameters on the Cart Pole and BipedalWalker, for future experiments on equal or similar environments.</p>"+
+		  "<a href=\"https://github.com/chrissbill23/INF585-Reinforcement-Learning\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work5":{
 		  "title": "Link Prediction",
@@ -88,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "Graph of links between websites",
 		  'categories': ['Artificial Intelligence'],
 		  'topics':['Machine Learning', 'Deep Learning', 'School Project'],
-		  "description": "<a href=\"https://github.com/marcogma/LinkPredictionOfFrenchWebGraph\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>In this project, we aim to find a predictor of an anchor link between two web pages by looking at their contents and train the model on a graph data as ground truth.</p><a href=\"https://github.com/marcogma/LinkPredictionOfFrenchWebGraph\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work6":{
 		  "title": "Boid Fishes",
@@ -98,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "Boid Fishes",
 		  'categories': ['Visual Computing'],
 		  'topics':['Computer Animation','Computer Graphics', 'School Project', 'Personal Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/BoidsFishes\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>The purpose of this project is to show the acquired knowledge from the Computer Animation class by doing a Boid fish simulation. I simulate the behavior of fishes under the ocean by applying the basic flocking model proposed by Creig Reynolds that consists of three simple steering forces based on the positions and velocities from its nearby flock mates. As well I implemented the environment and the skinning of the fishes to make it look like a real underwater simulation.</p><a href=\"https://github.com/chrissbill23/BoidsFishes\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work7":{
 		  "title": "The Simpsons Classifier",

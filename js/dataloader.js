@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var folder = "docs/";
   var personalinfos = 
   {
-    "introduction": "<div><p>I have a strong background in mathematics, software engineering and software development.</p><p>I love working in highly international and vivid environments, socializing with people from various cultural backgrounds and countries from all over the world. I also love travelling, music, watching good movies, and develop frameworks and intelligent apps. </p><p>My particular interest is to specialize in Computer Vision and Natural Language Processing, in order to pursue a research career that would hopefully give birth to new algorithms in those fields.</p></div>",
+    "introduction": "<div><p>I have a strong background in mathematics, software engineering and software development.</p><p>I love working in a high international and vivid environment, socializing with new people of different cultures, backgrounds and countries. I also love travelling, composing music, watching movies, and coding frameworks and intelligent apps. </p><p>I am particularly interested in a research job position in Computer Vision and/or Natural Language Processing, that would hopefully give birth to new algorithms in the field.</p></div>",
     "mainskills": ["<div class='single_progress'> <div class='label d-flex justify-content-between'> <span>Programming</span> <span>97%</span> "+
                     "</div> <div class='progress'> <div class='progress-bar' role='progressbar' style='width: 97%' aria-valuenow='25' aria-valuemin='0' aria-valuemax=\"100\"></div></div></div>",
 				"<div class='single_progress'> <div class='label d-flex justify-content-between'> <span>Machine Learning</span> <span>90%</span> "+
                     "</div> <div class='progress'> <div class='progress-bar' role='progressbar' style='width: 90%' aria-valuenow='25' aria-valuemin='0' aria-valuemax=\"100\"></div></div></div>",
-				"<div class='single_progress'> <div class='label d-flex justify-content-between'> <span>Deep Learning</span> <span>85%</span> "+
-                    "</div> <div class='progress'> <div class='progress-bar' role='progressbar' style='width: 85%' aria-valuenow='25' aria-valuemin='0' aria-valuemax=\"100\"></div></div></div>"
+				"<div class='single_progress'> <div class='label d-flex justify-content-between'> <span>Deep Learning</span> <span>93%</span> "+
+                    "</div> <div class='progress'> <div class='progress-bar' role='progressbar' style='width: 93%' aria-valuenow='25' aria-valuemin='0' aria-valuemax=\"100\"></div></div></div>"
 				],
 	"degrees":["<div class=\"col-lg-4 col-md-6\"><div class=\"single_service text-center\"> <div class=\"icon\"> <img src=\"img/polytechnique.png\" alt=\"\"></div>"+
                     "<h3> MScT in Artificial Intelligence &amp; Advanced Visual Computing </h3><h4>2020 - 2021</h4><a href=\"education.html\" class=\"boxed-btn3-line\">Read details</a></div></div>",
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
 						{'name':'PostgreSQL', 'num': 87},{'name':'Qt', 'num': 95},{'name':'QtQuick', 'num': 95},{'name':'QML', 'num': 95},{'name':'PHP', 'num': 94}, {'name':'HTML5', 'num': 96},
 						{'name':'XHTML', 'num': 90}, {'name':'CSS', 'num': 93}, {'name':'Node.js', 'num': 90},{'name':'React.js', 'num': 83}, 
 						{'name':'AngularJS', 'num': 88},{'name':'TypeScript', 'num': 97},{'name':'JQuery', 'num': 96},{'name':'PlayFramework', 'num': 84}],
-	"datascience_skills":[{'name':'Machine Learning', 'num': 90},{'name':'Deep Learning', 'num': 85},
-						{'name':'Statistics', 'num': 80},{'name':'Reinforcement Learning', 'num': 76},{'name':'Computer Vision', 'num': 90},
+	"datascience_skills":[{'name':'Machine Learning', 'num': 90},{'name':'Deep Learning', 'num': 93},
+						{'name':'Statistics', 'num': 85},{'name':'Reinforcement Learning', 'num': 89},{'name':'Computer Vision', 'num': 90},
 						{'name':'Natural Language Processing', 'num': 75},{'name':'Scikit-Learn', 'num': 98},{'name':'Tensorflow', 'num': 80},
 						{'name':'Pytorch', 'num': 69},{'name':'R', 'num': 65},{'name':'AMPL', 'num': 70}, {'name':'Matlab', 'num': 60}]
   };

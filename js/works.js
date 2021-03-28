@@ -39,7 +39,66 @@ document.addEventListener('DOMContentLoaded', function() {
             '</div>', 
   };
   var data = 
-  {
+  {	   "work21":{
+		  "title": "Data Mining for Neural Networks Debugging",
+		  "subtitle": "Internship Project, Machine Learning, Deep Learning, Python",
+		  "image": "http://nicomaque.fr/wp-content/uploads/2016/03/logo-inria-1024x313.png",
+		  "year": "April 2021 - current",
+		   "imagedesc": "INRIA logo",
+		  "description": '<p>This internship is funded in the context of the HyAIAI \"Hybrid Approaches for Interpretable AI\" INRIA project lab (https://www.inria.fr/en/research/research-teams/inria-project-labs). With this position, we would like to go beyond the current common visualization techniques that help to understand what an individual neuron or a layer of neurons is computing, by focusing on groups of neurons  that  are  commonly  highly  activated  when  a  network  is  making  wrong  predictions  on  a  set  of examples. Tools such as activation maximization can be used to identify such neurons. We propose to use discriminative pattern mining, and, to begin with, the DiffNorm algorithm in conjunction with the  LCM  one to  identify  the  discriminative  activation  patterns among  the  identified  neurons. Identifying \"faulty\" groups of neurons could lead to the decomposition of the DL network into “blocks” encompassing several layers. \"Faulty\" blocks may be the first to be modified in the search for a better design.</p>',
+		  'categories': ['Artificial Intelligence', 'Data Science'],
+		  'topics':['Machine Learning', 'Deep Learning', 'Internship Project','Job Projects']
+	  },	
+	   "work19":{
+		  "title": "Adversarial Robustness",
+		  "subtitle": "Deep Learning, Python",
+		  "image": "img/proj_logos/enedis.png",
+		  "year": "November 2020 - March 2021",
+		   "imagedesc": "Enedis logo",
+		  "description": '<p>This work done for Enedis aimed to find a robust Deap Learning classifier of High voltage and Low Voltage units. More precisely, we were asked to find a robust model against small and large perturbations that could induct a misclassification of the units.</p>',
+		  'categories': ['Artificial Intelligence', 'Data Science'],
+		  'topics':['Machine Learning', 'Deep Learning', 'School Project']
+		},
+		"work17":{
+		  "title": "The Plant Watering Problem",
+		  "subtitle": "Reinforcement Learning, Python",
+		  "image": "img/proj_logos/plants.jfif",
+		  "year": "March 2021",
+		   "imagedesc": "Picture of growing plants",
+		  'categories': ['Artificial Intelligence'],
+		  'topics':['Reinforcement Learning', 'School Project', 'Personal Project'],
+		  "description": "<p>With this reinforcement learning project, I try to solve the watering problem of a set of plants in a garden</p><a href=\"https://github.com/chrissbill23/The-Plant-Watering-Problem\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
+	  },
+	  "work16":{
+		  "title": "Advanced 3D Graphics",
+		  "subtitle": "Visual Computing, Computer Animation, C#",
+		  "image": "img/proj_logos/1.PNG",
+		  "year": "November 2020",
+		   "imagedesc": "A screenshot of this project",
+		  'categories': ['Visual Computing'],
+		  'topics':['Computer Animation','Computer Graphics', 'School Project', 'Personal Project'],
+		  "description": "<p>With this course project, I was asked to create 3D world by creating some Unity tools and scripts to allow the creations, the interactions among animals and humans, and the evolution of these.</p><a href=\"https://github.com/chrissbill23/Advanced-3D-Graphics-Project\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+	  },"work20":{
+		  "title": "NFL 1st and Future Impact Detection (Kaggle Challenge)",
+		  "subtitle": "Computer Vision, Python",
+		  "image": "img/proj_logos/helmets.jpg",
+		  "year": "November 2020",
+		   "imagedesc": "A screenshot of this project",
+		  'categories': ['Artificial Intelligence'],
+		  'topics':['Computer Vision','Deep Learning', 'School Project'],
+		  "description": "<p>For this project we decided to participate in a computer vision Kaggle challange, the National Football League (NFL) along with Amazon Web Services (AWS) are trying to develop the \"Digital Athlete\" a virtual representation of a composite NFL player that the NFL can use to model game scenarios to try to better predict and prevent player injuries. For this, The NFL is actively addressing the need for a computer vision system to detect on-field helmet impacts as part of the \"Digital Athlete\" platform.</p>"+
+		  "<p>The objective is to develop a computer vision model that automatically detects helmet impacts that occur on the field by using labeled video from the sidelines and end zones, and player tracking data. This information is sourced from the NFL's Next Gen Stats (NGS) system, which documents the position, speed, acceleration, and orientation for every player on the field during NFL games.</p>"+
+		  "<a href=\"https://github.com/chrissbill23/Kaggle-Challenge-NFL-1st-and-Future-Impact-Detection\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+	  },"work18":{
+		  "title": "Epanechnikov Mean Shift",
+		  "subtitle": "Visual Computing, Computer Animation, Computer Vision, Python",
+		  "image": "img/proj_logos/epanechnikov.PNG",
+		  "year": "October 2020",
+		   "imagedesc": "A screenshot of this project",
+		  'categories': ['Data Science','Artificial Intelligence'],
+		  'topics':['Computer Vision','Computer Graphics', 'School Project', 'Data Analysis'],
+		  "description": "<p>I implement Epanechnikov Mean Shift Algorithm, which can be used for image segmentation, and compare results with the Mean Shift using a Gaussian Kernel.</p><a href=\"https://github.com/chrissbill23/Epanechnikov-Mean-Shift\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+	  },
 	  "work1":{
 		  "title": "CLTV Forecasting",
 		  "subtitle": "Internship Project, Machine Learning, Deep Learning, Python",
@@ -97,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  },
 	  "work6":{
 		  "title": "Boid Fishes",
-		  "subtitle": "Visual Computing, C++",
+		  "subtitle": "Visual Computing, Computer Animation, C++",
 		  "image": "https://gupett.github.io/CG-Project/Images/500_boids.png?raw=true",
 		  "year": "February 2020 - April 2020",
 		   "imagedesc": "Boid Fishes",
@@ -113,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "The Simpsons detector",
 		  'categories': ['Artificial Intelligence'],
 		  'topics':['Machine Learning', 'Deep Learning', 'Computer Vision', 'School Project', 'Personal Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/The-Simpsons-Classifier\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>This is my first Machine Learning and Deep Learning project, in which I tried different techniques to learn a classifier of the Simpsons characters. The best model turned out to be a CNN classifier.</p><a href=\"https://github.com/chrissbill23/The-Simpsons-Classifier\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work8":{
 		  "title": "Maxi pizza",
@@ -123,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "The Simpsons detector",
 		  'categories': ['Operational Research'],
 		  'topics':['Linear Programming','School Project', 'Personal Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/Maxi-pizza\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>This was an optimizzation problem for which I was asked to find the best cost management possible using linear programming to maximize the revenue of a small local pizzeria, under different constraints.</p><a href=\"https://github.com/chrissbill23/Maxi-pizza\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work9":{
 		  "title": "Felicità regression",
@@ -133,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "happy face",
 		  'categories': ['Data Science'],
 		  'topics':['Regression', 'Statistics', 'School Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/Data-Mining-Project-Felicita-Dataset-using-R\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>This was my first data science project. The goal was to use regression methods to find the characteristics of life that make peole happy.</p><a href=\"https://github.com/chrissbill23/Data-Mining-Project-Felicita-Dataset-using-R\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work10":{
 		  "title": "Application for Production management",
@@ -163,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "Application logo",
 		  'categories': ['Software development', 'Database management'],
 		  'topics':['School Project', 'Personal Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>This was one of my Bachelor's programming project. I implemented an IT system for a high school with specific functionalities like moodle, the students and professors management, etc.</p><a href=\"https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work13":{
 		  "title": "VGoose",
@@ -173,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "vgoose logo",
 		  'categories': ['Web development', 'Database management'],
 		  'topics':['Framework', 'Personal Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/VGoose\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>I started this project with the intent to create a framework to abstract Mongoose with a more OOP codes in a TypeScript script.</p><a href=\"https://github.com/chrissbill23/VGoose\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work14":{
 		  "title": "My Eventi (accessible website)",
@@ -183,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "my eventi logo",
 		  'categories': ['Web development', 'Database management'],
 		  'topics':['School Project', 'Personal Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/My-Eventi-simple-accessible-web-site-\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>This was my first website project during my Bachelor. I developped this website with the functionalities of events managements and booking.</p><a href=\"https://github.com/chrissbill23/My-Eventi-simple-accessible-web-site-\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work15":{
 		  "title": "ImgUtils",
@@ -193,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		   "imagedesc": "img utils logo",
 		  'categories': ['Artificial Intelligence', 'Data Science'],
 		  'topics':['Framework','Computer Vision','Deep Learning', 'Personal Project'],
-		  "description": "<a href=\"https://github.com/chrissbill23/ImgUtils\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
+		  "description": "<p>I started this project with the intent to create a framework to have a faster pipeline in images classifying task, by offering functionalities of loading and preprocessing.</p><a href=\"https://github.com/chrissbill23/ImgUtils\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  }
   };
   

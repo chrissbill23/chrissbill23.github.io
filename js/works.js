@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
   {	   "work21":{
 		  "title": "Data Mining for Neural Networks Debugging",
 		  "subtitle": "Internship Project, Machine Learning, Deep Learning, Python",
-		  "image": "http://nicomaque.fr/wp-content/uploads/2016/03/logo-inria-1024x313.png",
+		  "image": "img/proj_logos/inria.png",
 		  "year": "April 2021 - current",
 		   "imagedesc": "INRIA logo",
 		  "description": '<p>This internship is funded in the context of the HyAIAI \"Hybrid Approaches for Interpretable AI\" INRIA project lab (https://www.inria.fr/en/research/research-teams/inria-project-labs). With this position, we would like to go beyond the current common visualization techniques that help to understand what an individual neuron or a layer of neurons is computing, by focusing on groups of neurons  that  are  commonly  highly  activated  when  a  network  is  making  wrong  predictions  on  a  set  of examples. Tools such as activation maximization can be used to identify such neurons. We propose to use discriminative pattern mining, and, to begin with, the DiffNorm algorithm in conjunction with the  LCM  one to  identify  the  discriminative  activation  patterns among  the  identified  neurons. Identifying \"faulty\" groups of neurons could lead to the decomposition of the DL network into “blocks” encompassing several layers. \"Faulty\" blocks may be the first to be modified in the search for a better design.</p>',
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  "work7":{
 		  "title": "The Simpsons Classifier",
 		  "subtitle": "Machine Learning, Deep Learning, Python",
-		  "image": "http://zachmoshe.com/images/articles/simpsons-detector/generated-images.png",
+		  "image": "img/proj_logos/simpson.png",
 		  "year": "June 2018 - August 2018",
 		   "imagedesc": "The Simpsons detector",
 		  'categories': ['Artificial Intelligence'],

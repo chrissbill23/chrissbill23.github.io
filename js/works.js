@@ -39,7 +39,40 @@ document.addEventListener('DOMContentLoaded', function() {
             '</div>', 
   };
   var data = 
-  {	   "work21":{
+  {	    
+		"work24":{
+		  "title": "Sondaggio.com",
+		  "subtitle": "Personal Project, Web development, React, Node.js",
+		  "image": "img/proj_logos/sondaggio.png",
+		  "year": "February 2022 - current",
+		   "imagedesc": "the index page",
+		  "description": "<a href=\"https://github.com/chrissbill23/Sondaggio.com\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>",
+		  'categories': ['Software Engineering','Web development' ],
+		  'topics':['Personal Project']
+	  },
+		"work23":{
+		  "title": "Flask Server Caching",
+		  "subtitle": "Personal Project, Software Engineering, HTML, Javascript, Python",
+		  "image": "img/proj_logos/flask.png",
+		  "year": "February 2022",
+		   "imagedesc": "the searh page",
+		  "description": "<p>An example of caching method on a Flask data server using GraphQL. The data server retrieves universities' infos from and serve the client's search request after saving the results in a local cache, for future requests of the same type.</p>"+
+		  "<a href=\"https://github.com/chrissbill23/Flask-Server-Caching\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>",
+		  'categories': ['Software Engineering','Web development' ],
+		  'topics':['Personal Project', 'Data Structures', 'Algorithms']
+	  },
+		"work22":{
+		  "title": "Data Structures and Algorithms",
+		  "subtitle": "Personal Project, Software Dev, Machine Learning, Deep Learning, Python",
+		  "image": "img/proj_logos/ds.png",
+		  "year": "January 2022 - current",
+		   "imagedesc": "Data Structures image",
+		  "description": '<p>My implementations in Python of some Data Structures and Algorithms.</p>'+
+		  "<a href=\"https://github.com/chrissbill23/Data-Structures-and-Algorithms\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>",
+		  'categories': ['Software Engineering','Artificial Intelligence' ],
+		  'topics':['Machine Learning', 'Deep Learning', 'Personal Project', 'Data Structures', 'Algorithms']
+	  },
+		"work21":{
 		  "title": "Data Mining for Neural Networks Debugging",
 		  "subtitle": "Internship Project, Machine Learning, Deep Learning, Python",
 		  "image": "img/proj_logos/inria.png",
@@ -196,31 +229,31 @@ document.addEventListener('DOMContentLoaded', function() {
 	  },
 	  "work10":{
 		  "title": "Application for Production management",
-		  "subtitle": "Software development, Internship Project, C++, Qt, PostgreSQL, Fast Fashion industry",
+		  "subtitle": "Software Engineering, Internship Project, C++, Qt, PostgreSQL, Fast Fashion industry",
 		  "image": "https://www.just-iou.fr/wp-content/uploads/2020/03/webdesk_adv_1_1-3.jpg",
 		  "year": "July 2018 - September 2018",
 		   "imagedesc": "Imperial logo",
 		  "description": '<p>This work done for SOGEA S.R.L (visit https://www.sogeasoft.com/) during my internship was to develop an efficient desktop and tablet application for Imperial Fashion to manage their clothes production.</P>',
-		  'categories': ['Software development', 'Database management'],
+		  'categories': ['Software Engineering', 'Database management'],
 		  'topics':['Internship Project','Job Projects']
 	  },
 	  "work11":{
 		  "title": "Software Developer at SOGEA S.R.L",
-		  "subtitle": "Software development, Job Experience, C++, Qt, PostgreSQL",
+		  "subtitle": "Software Engineering, Job Experience, C++, Qt, PostgreSQL",
 		  "image": "https://www.sogeasoft.com/img/logo.png",
 		  "year": "September 2018 - September 2019",
 		   "imagedesc": "Sogeasoft logo",
 		  "description": '<p>Permanent job I had at SOGEA S.R.L (visit https://www.sogeasoft.com/) but quit to persue my MScT studies. During this job experience my main tasks were to develop efficient desktop applications and build management systems for customers of different industries.</P>',
-		  'categories': ['Software development', 'Database management'],
+		  'categories': ['Software Engineering', 'Database management'],
 		  'topics':['Job Projects']
 	  },
 	  "work12":{
 		  "title": "Liceo Scientifico Richard Feynman (School IT System)",
-		  "subtitle": "Software development, C++, Qt, XML",
+		  "subtitle": "Software Engineering, C++, Qt, XML",
 		  "image": "https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman/blob/master/screenshot/Login.png?raw=true",
 		  "year": "May 2017 - July 2017",
 		   "imagedesc": "Application logo",
-		  'categories': ['Software development', 'Database management'],
+		  'categories': ['Software Engineering', 'Database management'],
 		  'topics':['School Project', 'Personal Project'],
 		  "description": "<p>This was one of my Bachelor's programming project. I implemented an IT system for a high school with specific functionalities like moodle, the students and professors management, etc.</p><a href=\"https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },

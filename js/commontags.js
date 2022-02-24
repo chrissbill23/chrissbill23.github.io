@@ -16,7 +16,7 @@
                                 '<div class="main-menu  d-none d-lg-block">'+
                                     '<nav>'+
                                         '<ul id="navigation">'+
-                                            '<li id="index_page"><a href="index.html">home</a></li>'+
+                                            '<li id="index_page"><a href="/">home</a></li>'+
                                             '<li id="works_page"><a href="works.html">Works</a></li>'+
                                             '<li id="education_page"><a href="education.html">Education</a></li>'+
                                             '<li id="about_page"><a href="about.html">about</a></li>'+

@@ -76,7 +76,8 @@
 		div = $("#footer");
 	    div.append(tags['footer']);
 		div = $("#datecopyright");
-	    div.text(new Date().getFullYear());
+	    //div.text(new Date().getFullYear());
+		div.text("2020");
 		
 		currpage = $("span#getPage").attr( "data-content" );
 		$('#'+currpage+' a').attr('class','current_page');

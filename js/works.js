@@ -39,12 +39,41 @@ document.addEventListener('DOMContentLoaded', function() {
             '</div>', 
   };
   var data = 
-  {	    
+  {	 "work27":{
+		  "title": "Full-stack Web Engineer at iKe Tech",
+		  "subtitle": "Job Projects, Web development, HTML, Javascript, Python",
+		  "image": "img/proj_logos/ike.png",
+		  "year": "February 2023 - September 2023",
+		   "imagedesc": "logo of iKe Tech",
+		  "description":  "<p>In the role of a Python Full-stack engineer, I have designed and built from scratch, the database, the back-end micro-services app and a front-end app.</p>",
+		  'categories': ['Software Engineering','Web development' ],
+		  'topics':['Job Projects', 'Entrepreneurship']
+	  },
+	  "work26":{
+		  "title": "Software Engineer at imagino",
+		  "subtitle": "Job Projects, Software Engineering, Python",
+		  "image": "img/proj_logos/imagino.jpg",
+		  "year": "March 2022 - June 2022",
+		   "imagedesc": "logo of imagino",
+		  "description":  "<p>In the role of a Back-end Developer, my tasks are to implement new features, or extends currents, of the backend applications of the data-driven SaaS of the company </p>",
+		  'categories': ['Software Engineering','Web development', 'Software Engineering', 'Data Engineering' ],
+		  'topics':['Job Projects']
+	  },
+	"work25":{
+		  "title": "AI Engineer at Tech2Heal",
+		  "subtitle": "Job Projects, Web development, HTML, Javascript, Python",
+		  "image": "img/proj_logos/tech2heal.jpg",
+		  "year": "March 2022 - June 2022",
+		   "imagedesc": "logo of tech2heal",
+		  "description":  "<p>In the role of a Python Full-stack engineer, I have designed and built from scratch, the database, the back-end micro-services app and a front-end app.</p>",
+		  'categories': ['Software Engineering','Web development', 'Machine Learning', 'Data Science' ],
+		  'topics':['Job Projects']
+	  },
 		"work24":{
 		  "title": "Sondaggio.com",
 		  "subtitle": "Personal Project, Web development, React, Node.js",
 		  "image": "img/proj_logos/sondaggio.png",
-		  "year": "February 2022 - current",
+		  "year": "February 2022 - March 2022",
 		   "imagedesc": "the index page",
 		  "description": "<a href=\"https://github.com/chrissbill23/Sondaggio.com\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>",
 		  'categories': ['Software Engineering','Web development' ],
@@ -166,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  "work4":{
 		  "title": "Bipedal Walker",
 		  "subtitle": "Reinforcement Learning Project, Python",
-		  "image": "https://gym.openai.com/videos/2019-10-21--mqt8Qj1mwo/BipedalWalkerHardcore-v2/poster.jpg",
+		  "image": "https://camo.githubusercontent.com/42944516445d4abecb36a309b1e0005bccb3369261662504562c837120baadaf/68747470733a2f2f6472336e676c3739377a3534762e636c6f756466726f6e742e6e65742f6269706564616c2d77616c6b65722d737563636573732e676966",
 		  "year": "February 2020 - March 2020",
 		   "imagedesc": "The Bipedal walker",
 		  'categories': ['Artificial Intelligence'],

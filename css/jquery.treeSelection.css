@@ -1,0 +1,77 @@
+.treeSelection {
+    position: absolute;
+    background-color: #fff;
+    overflow: auto;
+    height: auto;
+    max-height: 350px;
+	z-index:500;
+}
+.treeSelection label {
+    cursor: default;
+}
+.treeSelection .no-sign label {
+    cursor: pointer;
+}
+.treeSelection li label[data-sub="true"]{
+    font-weight: bold;
+	font-size: 1rem;
+	margin-left: .5rem;
+	margin-top: 1rem;
+}
+.treeSelection .no-sign {
+	margin-left: 2rem;
+    list-style-type: none;
+	cursor: pointer;
+}
+.treeSelector {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+	cursor: pointer;
+	min-height:3rem;
+	line-height: 1.2rem;
+	font-size: .9rem;
+}
+.treeSelector b {
+    font-weight: normal;
+    display:inline-block;
+    background-color: #040D1E;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size:0.8rem;
+	margin-right:0.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    color:#fff;
+}
+.treeSelector b span {
+    font-size:0.7rem;
+    background-color: #040D1E;
+    margin-left:0.5rem;
+    padding: .4rem;
+    color:#fff;
+}
+.treeSelector b span:hover {
+    color:red;
+}
+
+.treeSelector.custom-select{
+	background-image: none;
+}
+#filterBtn {
+	display: inline-block;
+	width: 8%;
+	min-height: 2.8rem;
+	font-size: 1.5rem;
+	background-color: transparent;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+	text-align: right;
+	height:: calc(2.25rem + 2px);
+}
+#nextTofilterBtn {
+	width: 80%;
+	display: inline-block;
+}

@@ -5916,6 +5916,11 @@ h6 {
   color: #777;
 }
 
+.desc {
+	padding-left:2rem;
+	margin-bottom: 1rem !important;
+	margin-top: 2rem;
+}
 /*============ End Blog Single Styles  =============*/
 /**************** blog part css start ****************/
 /* line 2, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog_part.scss */
@@ -6067,6 +6072,14 @@ h6 {
   display: inline-block;
   margin-top: 10px;
 }
+div.section-about {
+	margin-bottom: 4rem !important;
+}
+
+.section-about .download_text h3 {
+	margin-bottom: .5rem !important;
+}
+
 
 @media (max-width: 576px) {
   /* line 97, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog_part.scss */

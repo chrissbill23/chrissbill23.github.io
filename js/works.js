@@ -39,166 +39,217 @@ document.addEventListener('DOMContentLoaded', function() {
             '</div>', 
   };
   var data = 
-  {	 "work27":{
+  {	"work30":{
+		  "title": "Software Developer at AG2R la Mondiale",
+		  "subtitle": "Job Experience, Software Development, Web development",
+		  "image": "img/proj_logos/ag2r.png",
+		  "year": "March 2024 - current",
+		   "imagedesc": "logo of AG2R",
+		  "description":  "<p>AG2R La Mondiale is one of the best companies in France for insurance, pensions and savings management. I was sent to AG2R as an Epigone IT consultant to design and build IT tools and platforms for AG2R's clients to access and manage their contracts and other documents.</p>",
+		  'categories': ['Software Engineering','Web development', 'Data Engineering' ],
+		  'tools': ['Python', 'Java', 'Javascript', 'Angular', 'Node.js', 'HTML'],
+		  'topics':['Job Experience']
+	  },
+	"work29":{
+		  "title": "IT Consultant at Epigone",
+		  "subtitle": "Job Experience, Software Engineering, Web development",
+		  "image": "img/proj_logos/epigone_logo.jpg",
+		  "year": "February 2024 - current",
+		   "imagedesc": "logo of Epigone",
+		  "description":  "<p>Epigone is a consulting company that was bought by Adentis. I am also an IT consultant in Epigone, and my role of IT Consultant t is to design and build IT solutions for our clients which are companies of medium and big sizes.</p>",
+		  'categories': ['Software Engineering','Web development', 'Data Engineering' ],
+		  'tools': ['Python', 'Java', 'Javascript', 'Angular', 'Node.js', 'HTML'],
+		  'topics':['Job Experience']
+	  },
+	"work28":{
+		  "title": "IT Consultant at Adentis",
+		  "subtitle": "Job Experience, Software Engineering, Web development",
+		  "image": "img/proj_logos/adentis.jpg",
+		  "year": "September 2023 - current",
+		   "imagedesc": "logo of Adentis",
+		  "description":  "<p>In the role of IT Consultant, my missions are to design and build IT solutions for our clients which are companies of medium and big sizes.</p>",
+		  'categories': ['Software Engineering','Web development', 'Data Engineering' ],
+		  'tools': ['Python', 'Java', 'Javascript', 'Angular', 'Node.js', 'HTML'],
+		  'topics':['Job Experience']
+	  },
+	"work27":{
 		  "title": "Full-stack Web Engineer at iKe Tech",
-		  "subtitle": "Job Projects, Web development, HTML, Javascript, Python",
+		  "subtitle": "Job Experience, Web development",
 		  "image": "img/proj_logos/ike.png",
 		  "year": "February 2023 - September 2023",
 		   "imagedesc": "logo of iKe Tech",
 		  "description":  "<p>In the role of a Python Full-stack engineer, I have designed and built from scratch, the database, the back-end micro-services app and a front-end app.</p>",
-		  'categories': ['Software Engineering','Web development' ],
-		  'topics':['Job Projects', 'Entrepreneurship']
+		  'categories': ['Web development' ],
+		  'tools': ['Python', 'PostgreSQL', 'Javascript', 'Node.js', 'HTML'],
+		  'topics':['Job Experience', 'Entrepreneurship']
 	  },
 	  "work26":{
 		  "title": "Software Engineer at imagino",
-		  "subtitle": "Job Projects, Software Engineering, Python",
+		  "subtitle": "Job Experience, Software Engineering",
 		  "image": "img/proj_logos/imagino.jpg",
 		  "year": "March 2022 - June 2022",
 		   "imagedesc": "logo of imagino",
+		  'tools': ['Golang','Python', 'React', 'Javascript', 'Node.js', 'HTML', 'MySQL', 'MongoDB', 'PostgreSQL'],
 		  "description":  "<p>In the role of a Back-end Developer, my tasks are to implement new features, or extends currents, of the backend applications of the data-driven SaaS of the company </p>",
-		  'categories': ['Software Engineering','Web development', 'Software Engineering', 'Data Engineering' ],
-		  'topics':['Job Projects']
+		  'categories': ['Software Engineering', 'Data Engineering' ],
+		  'topics':['Job Experience']
 	  },
 	"work25":{
 		  "title": "AI Engineer at Tech2Heal",
-		  "subtitle": "Job Projects, Web development, HTML, Javascript, Python",
+		  "subtitle": "Job Experience, Web development",
 		  "image": "img/proj_logos/tech2heal.jpg",
 		  "year": "March 2022 - June 2022",
 		   "imagedesc": "logo of tech2heal",
+		  'tools': ['Python', 'GraphQL', 'React', 'Javascript', 'Node.js', 'HTML'],
 		  "description":  "<p>In the role of a Python Full-stack engineer, I have designed and built from scratch, the database, the back-end micro-services app and a front-end app.</p>",
-		  'categories': ['Software Engineering','Web development', 'Machine Learning', 'Data Science' ],
-		  'topics':['Job Projects']
+		  'categories': ['Web development', 'Artificial Intelligence', 'Data Science' ],
+		  'topics':['Job Experience', 'Machine Learning']
 	  },
 		"work24":{
 		  "title": "Sondaggio.com",
-		  "subtitle": "Personal Project, Web development, React, Node.js",
+		  "subtitle": "Personal Project, Web development",
 		  "image": "img/proj_logos/sondaggio.png",
 		  "year": "February 2022 - March 2022",
 		   "imagedesc": "the index page",
 		  "description": "<a href=\"https://github.com/chrissbill23/Sondaggio.com\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>",
-		  'categories': ['Software Engineering','Web development' ],
+		  'categories': ['Web development' ],
+		  'tools': ['React', 'Javascript', 'Node.js', 'HTML'],
 		  'topics':['Personal Project']
 	  },
 		"work23":{
 		  "title": "Flask Server Caching",
-		  "subtitle": "Personal Project, Software Engineering, HTML, Javascript, Python",
+		  "subtitle": "Personal Project, Software Engineering",
 		  "image": "img/proj_logos/flask.png",
 		  "year": "February 2022",
 		   "imagedesc": "the searh page",
 		  "description": "<p>An example of caching method on a Flask data server using GraphQL. The data server retrieves universities' infos from and serve the client's search request after saving the results in a local cache, for future requests of the same type.</p>"+
 		  "<a href=\"https://github.com/chrissbill23/Flask-Server-Caching\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>",
-		  'categories': ['Software Engineering','Web development' ],
+		  'categories': ['Web development' ],
+		  'tools': ['Python', 'Javascript', 'HTML'],
 		  'topics':['Personal Project', 'Data Structures', 'Algorithms']
 	  },
 		"work22":{
 		  "title": "Data Structures and Algorithms",
-		  "subtitle": "Personal Project, Software Dev, Machine Learning, Deep Learning, Python",
+		  "subtitle": "Personal Project, Software Development",
 		  "image": "img/proj_logos/ds.png",
 		  "year": "January 2022 - current",
 		   "imagedesc": "Data Structures image",
 		  "description": '<p>My implementations in Python of some Data Structures and Algorithms.</p>'+
 		  "<a href=\"https://github.com/chrissbill23/Data-Structures-and-Algorithms\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>",
-		  'categories': ['Software Engineering','Artificial Intelligence' ],
+		  'categories': ['Software Engineering' ],
+		  'tools': ['Python'],
 		  'topics':['Machine Learning', 'Deep Learning', 'Personal Project', 'Data Structures', 'Algorithms']
 	  },
 		"work21":{
 		  "title": "Data Mining for Neural Networks Debugging",
-		  "subtitle": "Internship Project, Machine Learning, Deep Learning, Python",
+		  "subtitle": "Internship Project, Machine Learning, Deep Learning",
 		  "image": "img/proj_logos/inria.png",
 		  "year": "April 2021 - current",
 		   "imagedesc": "INRIA logo",
 		  "description": '<p>This internship is funded in the context of the HyAIAI \"Hybrid Approaches for Interpretable AI\" INRIA project lab (https://www.inria.fr/en/research/research-teams/inria-project-labs). With this position, we would like to go beyond the current common visualization techniques that help to understand what an individual neuron or a layer of neurons is computing, by focusing on groups of neurons  that  are  commonly  highly  activated  when  a  network  is  making  wrong  predictions  on  a  set  of examples. Tools such as activation maximization can be used to identify such neurons. We propose to use discriminative pattern mining, and, to begin with, the DiffNorm algorithm in conjunction with the  LCM  one to  identify  the  discriminative  activation  patterns among  the  identified  neurons. Identifying \"faulty\" groups of neurons could lead to the decomposition of the DL network into “blocks” encompassing several layers. \"Faulty\" blocks may be the first to be modified in the search for a better design.</p>',
 		  'categories': ['Artificial Intelligence', 'Data Science'],
-		  'topics':['Machine Learning', 'Deep Learning', 'Internship Project','Job Projects']
+		  'tools': ['Python'],
+		  'topics':['Machine Learning', 'Deep Learning', 'Internship Project','Job Experience']
 	  },	
 	   "work19":{
 		  "title": "Adversarial Robustness",
-		  "subtitle": "Deep Learning, Python",
+		  "subtitle": "Deep Learning",
 		  "image": "img/proj_logos/enedis.png",
 		  "year": "November 2020 - March 2021",
 		   "imagedesc": "Enedis logo",
 		  "description": '<p>This work done for Enedis aimed to find a robust Deap Learning classifier of High voltage and Low Voltage units. More precisely, we were asked to find a robust model against small and large perturbations that could induct a misclassification of the units.</p>',
 		  'categories': ['Artificial Intelligence', 'Data Science'],
+		  'tools': ['Python'],
 		  'topics':['Machine Learning', 'Deep Learning', 'School Project']
 		},
 		"work17":{
 		  "title": "The Plant Watering Problem",
-		  "subtitle": "Reinforcement Learning, Python",
+		  "subtitle": "Reinforcement Learning",
 		  "image": "img/proj_logos/plants.jfif",
 		  "year": "March 2021",
 		   "imagedesc": "Picture of growing plants",
 		  'categories': ['Artificial Intelligence'],
+		  'tools': ['Python'],
 		  'topics':['Reinforcement Learning', 'School Project', 'Personal Project'],
 		  "description": "<p>With this reinforcement learning project, I try to solve the watering problem of a set of plants in a garden</p><a href=\"https://github.com/chrissbill23/The-Plant-Watering-Problem\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work16":{
 		  "title": "Advanced 3D Graphics",
-		  "subtitle": "Visual Computing, Computer Animation, C#",
+		  "subtitle": "Visual Computing, Computer Animation",
 		  "image": "img/proj_logos/1.PNG",
 		  "year": "November 2020",
 		   "imagedesc": "A screenshot of this project",
 		  'categories': ['Visual Computing'],
+		  'tools': ['C#'],
 		  'topics':['Computer Animation','Computer Graphics', 'School Project', 'Personal Project'],
 		  "description": "<p>With this course project, I was asked to create 3D world by creating some Unity tools and scripts to allow the creations, the interactions among animals and humans, and the evolution of these.</p><a href=\"https://github.com/chrissbill23/Advanced-3D-Graphics-Project\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
-	  },"work20":{
+	  },
+	  "work20":{
 		  "title": "NFL 1st and Future Impact Detection (Kaggle Challenge)",
 		  "subtitle": "Computer Vision, Python",
 		  "image": "img/proj_logos/helmets.jpg",
 		  "year": "November 2020",
 		   "imagedesc": "A screenshot of this project",
 		  'categories': ['Artificial Intelligence'],
+		  'tools': ['Python'],
 		  'topics':['Computer Vision','Deep Learning', 'School Project'],
 		  "description": "<p>For this project we decided to participate in a computer vision Kaggle challange, the National Football League (NFL) along with Amazon Web Services (AWS) are trying to develop the \"Digital Athlete\" a virtual representation of a composite NFL player that the NFL can use to model game scenarios to try to better predict and prevent player injuries. For this, The NFL is actively addressing the need for a computer vision system to detect on-field helmet impacts as part of the \"Digital Athlete\" platform.</p>"+
 		  "<p>The objective is to develop a computer vision model that automatically detects helmet impacts that occur on the field by using labeled video from the sidelines and end zones, and player tracking data. This information is sourced from the NFL's Next Gen Stats (NGS) system, which documents the position, speed, acceleration, and orientation for every player on the field during NFL games.</p>"+
 		  "<a href=\"https://github.com/chrissbill23/Kaggle-Challenge-NFL-1st-and-Future-Impact-Detection\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
-	  },"work18":{
+	  },
+	  "work18":{
 		  "title": "Epanechnikov Mean Shift",
-		  "subtitle": "Visual Computing, Computer Animation, Computer Vision, Python",
+		  "subtitle": "Visual Computing, Computer Animation, Computer Vision",
 		  "image": "img/proj_logos/epanechnikov.PNG",
 		  "year": "October 2020",
 		   "imagedesc": "A screenshot of this project",
-		  'categories': ['Data Science','Artificial Intelligence'],
+		  'categories': ['Visual Computing','Artificial Intelligence'],
+		  'tools': ['Python'],
 		  'topics':['Computer Vision','Computer Graphics', 'School Project', 'Data Analysis'],
 		  "description": "<p>I implement Epanechnikov Mean Shift Algorithm, which can be used for image segmentation, and compare results with the Mean Shift using a Gaussian Kernel.</p><a href=\"https://github.com/chrissbill23/Epanechnikov-Mean-Shift\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work1":{
 		  "title": "CLTV Forecasting",
-		  "subtitle": "Internship Project, Machine Learning, Deep Learning, Python",
+		  "subtitle": "Internship Project, Machine Learning, Deep Learning",
 		  "image": "https://www.tourmag.com/photo/art/grande/8334013-13054962.jpg?v=1444214835",
 		  "year": "April 2020 - August 2020",
 		   "imagedesc": "Amadeus company logo",
 		  "description": '<p>This work done for Amadeus S.A.S during my internship was addressing the challenge of finding the potential big travelers of an airline company, using machine learning and deep learning to predict the Customer Lifetime Value (CLV or LTV or CLTV) of the current passengers at a future point parameter of the model.</P>',
 		  'categories': ['Artificial Intelligence', 'Data Science'],
-		  'topics':['Machine Learning', 'Deep Learning', 'Internship Project','Job Projects']
+		  'tools': ['Python'],
+		  'topics':['Machine Learning', 'Deep Learning', 'Internship Project','Job Experience']
 	  },
 	  "work2":{
 		  "title": "American Sign Language Recognition",
-		  "subtitle": "Computer Vision, Python",
-		  "image": "https://camo.githubusercontent.com/e66312310514b1385ef4e976d5cf34d161e190e4/68747470733a2f2f642e6e6577737765656b2e636f6d2f656e2f66756c6c2f313339343638362f61736c2d67657474792d696d616765732e6a7067",
+		  "subtitle": "Computer Vision",
+		  "image": "img/proj_logos/asl.png",
 		  "year": "December 2019 - January 2020",
 		   "imagedesc": "American Sign Language letters",
 		  "description": "<p>In this project, I coded a real-time translator of the American Sign Letters from a webcam input. This desktop application has a classifier that I have trained to do such task with a F1-score 0.93/1.0 </p><a href=\"https://github.com/marcogma/SignLanguageProject\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>",
 		  'categories': ['Artificial Intelligence'],
+		  'tools': ['Python'],
 		  'topics':['Deep Learning', 'Computer Vision','School Project', 'Personal Project']
 	  },
 	  "work3":{
 		  "title": "Geodesic In Heat",
-		  "subtitle": "Digital Representation &amp; Analysis of Shape Project, C++",
+		  "subtitle": "Digital Representation &amp; Analysis of Shape Project",
 		  "image": "https://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/teaser.png",
 		  "year": "November 2019 - December 2020",
 		   "imagedesc": "Geodesic In Heat on a bunny",
 		  'categories': ['Visual Computing'],
+		  'tools': ['C++'],
 		  'topics':['Computer Graphics', 'School Project'],
 		  "description": "<p>In this project I worked on the practical implementation of using heat method for computing geodesic distances for meshes and point clouds based on the research paper Geodesics in Heat: A New Approach to Computing Distance Based on Heat Flow by Keenan Crane [2013]. I have modified the equations for the gradient normalization and added two boundary conditions. </p><a href=\"https://github.com/chrissbill23/GeodesicInHeat\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 
 	  "work4":{
 		  "title": "Bipedal Walker",
-		  "subtitle": "Reinforcement Learning Project, Python",
-		  "image": "https://camo.githubusercontent.com/42944516445d4abecb36a309b1e0005bccb3369261662504562c837120baadaf/68747470733a2f2f6472336e676c3739377a3534762e636c6f756466726f6e742e6e65742f6269706564616c2d77616c6b65722d737563636573732e676966",
+		  "subtitle": "Reinforcement Learning Project",
+		  "image": "img/proj_logos/BipedalWalker.gif",
 		  "year": "February 2020 - March 2020",
 		   "imagedesc": "The Bipedal walker",
 		  'categories': ['Artificial Intelligence'],
+		  'tools': ['Python'],
 		  'topics':['Reinforcement Learning', 'School Project', 'Personal Project'],
 		  "description": "<p>With our project we try to analyze two environments of two different complexities and action space in order to catch up the parametrization of the training needed for an overall good result, by doing extensive parameter tunning and generating empirical simulations. The two environments are: Cart Pole and Bipedal Walker."+
 		  " The Cart Pole was analyzed using DQN and DQN-Experience Replay while the BipedalWalker was analyzed with the DDPG algorithm using an Actor-Critic agent and then using Augmented Random Search. For the first, We have found that parametrized implementations of these agents surpass their naive implementations. While for the Bipedal Walker, "+
@@ -208,42 +259,46 @@ document.addEventListener('DOMContentLoaded', function() {
 	  },
 	  "work5":{
 		  "title": "Link Prediction",
-		  "subtitle": "Machine Learning, Deep Learning, Python",
+		  "subtitle": "Machine Learning, Deep Learning",
 		  "image": "https://cdn2.hubspot.net/hub/19230/file-13381774-jpg/images/link_building.jpg",
 		  "year": "December 2020 - January 2020",
 		   "imagedesc": "Graph of links between websites",
 		  'categories': ['Artificial Intelligence'],
+		  'tools': ['Python'],
 		  'topics':['Machine Learning', 'Deep Learning', 'School Project'],
 		  "description": "<p>In this project, we aim to find a predictor of an anchor link between two web pages by looking at their contents and train the model on a graph data as ground truth.</p><a href=\"https://github.com/marcogma/LinkPredictionOfFrenchWebGraph\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work6":{
 		  "title": "Boid Fishes",
-		  "subtitle": "Visual Computing, Computer Animation, C++",
+		  "subtitle": "Visual Computing, Computer Animation",
 		  "image": "https://gupett.github.io/CG-Project/Images/500_boids.png?raw=true",
 		  "year": "February 2020 - April 2020",
 		   "imagedesc": "Boid Fishes",
 		  'categories': ['Visual Computing'],
+		  'tools': ['C++'],
 		  'topics':['Computer Animation','Computer Graphics', 'School Project', 'Personal Project'],
 		  "description": "<p>The purpose of this project is to show the acquired knowledge from the Computer Animation class by doing a Boid fish simulation. I simulate the behavior of fishes under the ocean by applying the basic flocking model proposed by Creig Reynolds that consists of three simple steering forces based on the positions and velocities from its nearby flock mates. As well I implemented the environment and the skinning of the fishes to make it look like a real underwater simulation.</p><a href=\"https://github.com/chrissbill23/BoidsFishes\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work7":{
 		  "title": "The Simpsons Classifier",
-		  "subtitle": "Machine Learning, Deep Learning, Python",
+		  "subtitle": "Machine Learning, Deep Learning",
 		  "image": "img/proj_logos/simpson.png",
 		  "year": "June 2018 - August 2018",
 		   "imagedesc": "The Simpsons detector",
-		  'categories': ['Artificial Intelligence'],
+		  'categories': ['Artificial Intelligence'],  
+		  'tools': ['Python'],
 		  'topics':['Machine Learning', 'Deep Learning', 'Computer Vision', 'School Project', 'Personal Project'],
 		  "description": "<p>This is my first Machine Learning and Deep Learning project, in which I tried different techniques to learn a classifier of the Simpsons characters. The best model turned out to be a CNN classifier.</p><a href=\"https://github.com/chrissbill23/The-Simpsons-Classifier\" target=\"_blank\" class=\"boxed-btn3-line\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work8":{
 		  "title": "Maxi pizza",
-		  "subtitle": "Operational Research, Optimization, Ampl",
+		  "subtitle": "Operational Research, Optimization",
 		  "image": "https://media-cdn.tripadvisor.com/media/photo-s/07/06/fb/3a/pizza-parma.jpg",
 		  "year": "June 2017 - August 2017",
 		   "imagedesc": "The Simpsons detector",
-		  'categories': ['Operational Research'],
-		  'topics':['Linear Programming','School Project', 'Personal Project'],
+		  'categories': ['Data Science'],  
+		  'tools': ['Ampl'],
+		  'topics':['Linear Programming','School Project', 'Personal Project', 'Operational Research'],
 		  "description": "<p>This was an optimizzation problem for which I was asked to find the best cost management possible using linear programming to maximize the revenue of a small local pizzeria, under different constraints.</p><a href=\"https://github.com/chrissbill23/Maxi-pizza\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work9":{
@@ -253,56 +308,62 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "year": "June 2017 - June 2017",
 		   "imagedesc": "happy face",
 		  'categories': ['Data Science'],
+		  'tools': ['R'],
 		  'topics':['Regression', 'Statistics', 'School Project'],
 		  "description": "<p>This was my first data science project. The goal was to use regression methods to find the characteristics of life that make peole happy.</p><a href=\"https://github.com/chrissbill23/Data-Mining-Project-Felicita-Dataset-using-R\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work10":{
 		  "title": "Application for Production management",
-		  "subtitle": "Software Engineering, Internship Project, C++, Qt, PostgreSQL, Fast Fashion industry",
-		  "image": "https://www.just-iou.fr/wp-content/uploads/2020/03/webdesk_adv_1_1-3.jpg",
+		  "subtitle": "Software Engineering, Internship Project",
+		  "image": "img/proj_logos/imperial.jpg",
 		  "year": "July 2018 - September 2018",
 		   "imagedesc": "Imperial logo",
 		  "description": '<p>This work done for SOGEA S.R.L (visit https://www.sogeasoft.com/) during my internship was to develop an efficient desktop and tablet application for Imperial Fashion to manage their clothes production.</P>',
-		  'categories': ['Software Engineering', 'Database management'],
-		  'topics':['Internship Project','Job Projects']
+		  'categories': ['Software Engineering'],
+		  'tools': ['C++', 'Qt','PostgreSQL', 'XML'],
+		  'topics':['Internship Project','Job Experience', 'Database management', 'Fast Fashion industry']
 	  },
 	  "work11":{
 		  "title": "Software Developer at SOGEA S.R.L",
-		  "subtitle": "Software Engineering, Job Experience, C++, Qt, PostgreSQL",
-		  "image": "https://www.sogeasoft.com/img/logo.png",
+		  "subtitle": "Software Engineering, Job Experience",
+		  "image": "img/proj_logos/sogeasoft.jpg",
 		  "year": "September 2018 - September 2019",
 		   "imagedesc": "Sogeasoft logo",
 		  "description": '<p>Permanent job I had at SOGEA S.R.L (visit https://www.sogeasoft.com/) but quit to persue my MScT studies. During this job experience my main tasks were to develop efficient desktop applications and build management systems for customers of different industries.</P>',
-		  'categories': ['Software Engineering', 'Database management'],
-		  'topics':['Job Projects']
+		  'categories': ['Software Engineering'],
+		  'tools': ['C++', 'Qt','PostgreSQL', 'XML'],
+		  'topics':['Job Experience','Database']
 	  },
 	  "work12":{
 		  "title": "Liceo Scientifico Richard Feynman (School IT System)",
-		  "subtitle": "Software Engineering, C++, Qt, XML",
+		  "subtitle": "Software Engineering",
 		  "image": "https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman/blob/master/screenshot/Login.png?raw=true",
 		  "year": "May 2017 - July 2017",
 		   "imagedesc": "Application logo",
-		  'categories': ['Software Engineering', 'Database management'],
+		  'categories': ['Software Engineering'],
 		  'topics':['School Project', 'Personal Project'],
+		  'tools': ['C++', 'Qt', 'XML'],
 		  "description": "<p>This was one of my Bachelor's programming project. I implemented an IT system for a high school with specific functionalities like moodle, the students and professors management, etc.</p><a href=\"https://github.com/chrissbill23/Liceo-scientifico-Richard-Feynman\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work13":{
 		  "title": "VGoose",
-		  "subtitle": "Web development, Mongoose, Node.js, TypeScript",
+		  "subtitle": "Web development",
 		  "image": "img/proj_logos/vgoose.png",
 		  "year": "September 2018 - ongoing",
 		   "imagedesc": "vgoose logo",
-		  'categories': ['Web development', 'Database management'],
+		  'categories': ['Web development'],
 		  'topics':['Framework', 'Personal Project'],
+		  'tools': ['MongoDB', 'Mongoose', 'Node.js', 'TypeScript'],
 		  "description": "<p>I started this project with the intent to create a framework to abstract Mongoose with a more OOP codes in a TypeScript script.</p><a href=\"https://github.com/chrissbill23/VGoose\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
 	  "work14":{
 		  "title": "My Eventi (accessible website)",
-		  "subtitle": "Web development, PHP, HTML, Javascript, CSS, SQL",
+		  "subtitle": "Web development",
 		  "image": "img/proj_logos/myeventi.png",
 		  "year": "June 2017 - September 2017",
 		   "imagedesc": "my eventi logo",
-		  'categories': ['Web development', 'Database management'],
+		  'categories': ['Web development'],
+		  'tools': ['PHP', 'HTML', 'Javascript', 'CSS', 'MySQL'],
 		  'topics':['School Project', 'Personal Project'],
 		  "description": "<p>This was my first website project during my Bachelor. I developped this website with the functionalities of events managements and booking.</p><a href=\"https://github.com/chrissbill23/My-Eventi-simple-accessible-web-site-\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  },
@@ -312,7 +373,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "image": "img/proj_logos/imgutils.png",
 		  "year": "April 2020 - current",
 		   "imagedesc": "img utils logo",
-		  'categories': ['Artificial Intelligence', 'Data Science'],
+		  'categories': ['Artificial Intelligence', 'Data Engineering'],
+		  'tools': ['Python'],
 		  'topics':['Framework','Computer Vision','Deep Learning', 'Personal Project'],
 		  "description": "<p>I started this project with the intent to create a framework to have a faster pipeline in images classifying task, by offering functionalities of loading and preprocessing.</p><a href=\"https://github.com/chrissbill23/ImgUtils\" class=\"boxed-btn3-line\" target=\"_blank\">View Project <i class=\"fa fa-github\"></i></a>"
 	  }
@@ -430,10 +492,81 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 	}
 	
+	//MULTIPLE SELECT FUNCTIONS DEFINITION
+	var data_list = Object.keys(data);
+	var all_tools = new Set();
+	var all_categories = new Set();
+	var all_sub_categories = new Set();
+	data_list.forEach(function (item, index) {
+		data[item]['tools'].forEach(all_tools.add, all_tools);
+		data[item]['categories'].forEach(all_categories.add, all_categories);
+		data[item]['topics'].forEach(all_sub_categories.add, all_sub_categories);
+	});
+	function searchMultiple(selected){
+		if(selected.length == 0) {
+			loadWorks(data);
+			return;
+		}
+		var s_data = {};
+		const selected_set =  new Set();
+		selected.each(function(ind, input){
+			value = $(input).contents().get(0).nodeValue;
+			selected_set.add(value);
+		});
+		
+		data_list.forEach(function (item, index) {
+			var itemMeta = new Set([...data[item]['categories'], 
+								...data[item]['tools'], 
+								...data[item]['topics']]);
+			const add_item = itemMeta.intersection(selected_set).size == selected_set.size;
+			if(add_item){
+				s_data[item] = data[item];
+			}
+		});
+		loadWorks(s_data);
+	}
+	
+	function loadMultiSelect( data){
+		$('select[name=choices-multiple]').treeSelection({
+			multiple: 3,
+			// or define the options in a data array
+			data: [  
+			{
+				name: 'Project',
+				items: ['Job Experience', 'Internship', 'Personal project']
+			}, 
+			{
+				name: 'Category',
+				items: [...all_categories].sort()
+			}, 
+			{
+				name: 'Tech Stack',
+				items: [...all_tools].sort()
+			}, 
+			{
+				name: 'Sub-category',
+				items: [...all_sub_categories].sort()
+			}
+			]
+		});
+		// Now we watch for new elements
+		const observer = new MutationObserver(() => {
+			const selected = $('b'); 
+			searchMultiple(selected);
+		  });
+		observer.observe(document.getElementById('treeSelectorContainer'), {
+				childList: true,
+				subtree: true
+		});
+		
+		
+    }
+	
 	
 	//RUN FUNCTIONS
     loadWorks(data);
 	worksCatsTopics();
+	loadMultiSelect(data);
 });
 
 

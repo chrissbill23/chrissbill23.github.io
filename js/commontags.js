@@ -46,14 +46,13 @@
                     '<div class="col-lg-8">'+
                         '<div class="lets_talk">'+
                             '<h3>Do you have any Project or Job Offer? <a href="#">Let’s Talk</a> </h3>'+
-                            '<p>I am available for any Machine Learning or Deep Learning project research job offer, full-time or (preferably) part-time.</p>'+
+                            '<p>I am available for any interesting Software Engineering and Machine/Deep Learning projects.</p>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+
                 '<div class="row">'+
 					'<a href="https://www.linkedin.com/in/christian-prince-bile/" class="col-md-3 single_links d-flex justify-content-between align-items-center" target="_blank"> <span>Linkedin</span><i class="fa fa-linkedin"></i> </a>'+
 					'<a href="mailto:christian2tv@gmail.com" class="col-md-3 single_links d-flex justify-content-between align-items-center"> <span>Gmail</span><i class="fa fa-google"></i> </a>'+
-					'<a href="https://www.facebook.com/bile.carlos/" class="col-md-3 single_links d-flex justify-content-between align-items-center" target="_blank"> <span>Facebook</span><i class="fa fa-facebook"></i> </a>'+
                 '</div>'+
             '</div>'+
         '</div>'+
@@ -62,7 +61,7 @@
                 '<div class="footer_border"></div>'+
                 '<div class="row">'+
                     '<div class="col-xl-12">'+
-                        '<p class="copy_right text-center">Copyright &copy;<span id="datecopyright"></span> All rights reserved | Bile Ezanin Christian Prince Carlos personal website</p>'+
+                        '<p class="copy_right text-center">Copyright &copy;<span id="datecopyright"></span> All rights reserved | Bile Ezanin Christian Prince Carlos portfolio</p>'+
                     '</div>'+
                 '</div>'+
             '</div>'+

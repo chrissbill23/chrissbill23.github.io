@@ -83,7 +83,7 @@ if (document.getElementById('default-select')) {
 
 });
 $(document).ready(function() {
-    $('select').niceSelect();
+    $('select').not('.not-niceSelect').niceSelect();
 });
 
         // prise slider 

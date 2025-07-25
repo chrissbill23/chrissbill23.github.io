@@ -17,10 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
 					"<div class=\"col-lg-4 col-md-6\"><div class=\"single_service text-center\"> <div class=\"icon\"> <img src=\"img/ricc.png\" alt=\"\"></div>"+
                     "<h3> Professional High School Degree in Economics and Finance </h3><h4>2010-2013</h4><a href=\"education.html\" class=\"boxed-btn3-line\">Read details</a></div></div>"
 					],
-	"projects": ['<div class="single_gallery"> <div class="thumb"><img src="https://www.tourmag.com/photo/art/grande/8334013-13054962.jpg?v=1444214835" alt=""></div><div class="gallery_heading"> <span>Internship Project, Machine Learning, Deep Learning, Python</span><h4><a href="works.html">CLTV Estimation Project</a></h4></div></div>',
-	             '<div class="single_gallery"> <div class="thumb"><img src="https://camo.githubusercontent.com/e66312310514b1385ef4e976d5cf34d161e190e4/68747470733a2f2f642e6e6577737765656b2e636f6d2f656e2f66756c6c2f313339343638362f61736c2d67657474792d696d616765732e6a7067" alt=""></div><div class="gallery_heading"> <span>Deep Learning, Python</span><h4><a href="works.html">American Sign Language Recognition</a></h4></div></div>',
+	"projects": ['<div class="single_gallery"> <div class="thumb"><img src="img/proj_logos/ag2r.png" alt=""></div><div class="gallery_heading"> <span>Job Experience, Software Development, Web development, Python, Java</span><h4><a href="works.html">IT Consultant at AG2R la Mondiale</a></h4></div></div>',
+	             '<div class="single_gallery"> <div class="thumb"><img src="https://www.tourmag.com/photo/art/grande/8334013-13054962.jpg?v=1444214835" alt=""></div><div class="gallery_heading"> <span>Job Experience, Machine Learning, Deep Learning, Python</span><h4><a href="works.html">CLTV Estimation Project</a></h4></div></div>',
 				 '<div class="single_gallery"> <div class="thumb"><img src="https://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/teaser.png" alt=""></div><div class="gallery_heading"> <span>Digital Representation &amp; Analysis of Shape Project, C++</span><h4><a href="works.html">Geodesic In Heat</a></h4></div></div>',
-				 '<div class="single_gallery"> <div class="thumb"><img src="https://gym.openai.com/videos/2019-10-21--mqt8Qj1mwo/BipedalWalkerHardcore-v2/poster.jpg" alt=""></div><div class="gallery_heading"> <span>Reinforcement Learning Project, Python</span><h4><a href="works.html">Bipedal Walker</a></h4></div></div>'
 	          ],
 	"progress_template": {
 							"head_no_margin": '<div class="col-lg-5 col-md-6"></div>',
@@ -39,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
 				},
 	"programming_skills":[{'name':'Software Development', 'num': 95},{'name':'Software Engineering', 'num': 90},{'name':'Web Development', 'num': 97},
 						{'name':'C++', 'num': 94},{'name':'Python', 'num': 83},{'name':'C', 'num': 80},
-						{'name':'Java', 'num': 86},{'name':'JavaScript', 'num': 94},{'name':'SQL', 'num': 91},{'name':'MongoDB', 'num': 90},
+						{'name':'Java', 'num': 86},{'name':'JavaScript', 'num': 94},{'name':'SQLite', 'num': 95},{'name':'MySQL', 'num': 91},{'name':'MongoDB', 'num': 90},
 						{'name':'PostgreSQL', 'num': 87},{'name':'Qt', 'num': 95},{'name':'QtQuick', 'num': 95},{'name':'QML', 'num': 95},{'name':'PHP', 'num': 94}, {'name':'HTML5', 'num': 96},
 						{'name':'XHTML', 'num': 90}, {'name':'CSS', 'num': 93}, {'name':'Node.js', 'num': 90},{'name':'React.js', 'num': 83}, 
-						{'name':'AngularJS', 'num': 88},{'name':'TypeScript', 'num': 97},{'name':'JQuery', 'num': 96},{'name':'PlayFramework', 'num': 84}],
+						{'name':'Angular', 'num': 88},{'name':'TypeScript', 'num': 97},{'name':'JQuery', 'num': 96},{'name':'PlayFramework', 'num': 84}],
 	"datascience_skills":[{'name':'Machine Learning', 'num': 90},{'name':'Deep Learning', 'num': 93},
 						{'name':'Statistics', 'num': 85},{'name':'Reinforcement Learning', 'num': 89},{'name':'Computer Vision', 'num': 90},
 						{'name':'Natural Language Processing', 'num': 75},{'name':'Scikit-Learn', 'num': 98},{'name':'Tensorflow', 'num': 80},

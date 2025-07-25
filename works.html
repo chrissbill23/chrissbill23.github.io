@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/search-form.css">
+    <link rel="stylesheet" href="css/jquery.treeSelection.css">
 </head>
 
 <body>
@@ -71,9 +72,15 @@
       <form>
         <div class="inner-form">
           <div class="advance-search">
-            <span class="desc">ADVANCED SEARCH</span>
+            <div class="row third">
+              <div class="input-field">
+                <div class="result-count">
+                  <span id="result-count-num">108 </span>results</div>
+              </div>
+            </div>
+            <span class="desc">FILTER RESULTS</span>
             <div class="row">
-              <div class="input-field" >
+              <!--div class="input-field" >
                 <div class="input-select" id='categories_select'>
                   <select data-trigger="" name="choices-single-defaul" >
                     <option placeholder="" value="">All categories</option>
@@ -82,17 +89,19 @@
               </div>
               <div class="input-field" id='topics_select'>
                 <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">All topics</option>
+                  <select data-trigger="" name="choices-single-default">
+                    <option placeholder="" value="">All tags</option>
                   </select>
                 </div>
-              </div>
-            </div>
-            <div class="row third">
-              <div class="input-field">
-                <div class="result-count">
-                  <span id="result-count-num">108 </span>results</div>
-              </div>
+              </div!-->
+			  <div class="container">
+				<button type="button" id="filterBtn"><i class="fa fa-filter"></i></button>
+                <div id="nextTofilterBtn" class="input-select multiple-inputs">
+				 <select name="choices-multiple" class="custom-select not-niceSelect">
+                    <option placeholder="" value="">All keywords</option>
+				 </select>
+				</div>
+			  </div>
             </div>
           </div>
         </div>
@@ -120,6 +129,7 @@
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/scrollIt.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/jquery.treeSelection.js"></script>
     <script src="js/nice-select.min.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
     <script src="js/slick.min.js"></script>
@@ -127,7 +137,7 @@
     <script src="js/commontags.js"></script>
     <script src="js/main.js"></script>
 	<script src="js/works.js"></script>
-	
-</body>
 
+</body>
+	
 </html>

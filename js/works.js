@@ -45,13 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "image": "img/proj_logos/ag2r.png",
 		  "year": "March 2024 - current",
 		   "imagedesc": "logo of AG2R",
-		  "description":  "<p>AG2R La Mondiale is one of the biggest companies in France for insurance, pensions and savings management. I was sent to AG2R as an Epigone IT consultant to develop systems for AG2R's clients to access and manage their contracts and other documents."+
-						  "More precisely, in an agile team of 9, my mission in this company is to design and develop IT tools and platforms to process a single or a batch of documents to then distribute it using different channels (emails, letter, electronic document management, electronic signature, etc.). The tools are application"+
-						  " that I developed using python for the batch processing and distribution, while the platforms were made of backend and frontend applications developed in Java and Angular, for the single document processing and distribution. I was also involved in bug fixings and CI/CD processes using GitLab "+
-						  "and other internal applications. </p>",
+		  "description":  "<p>In an agile team of 9, my mission in this company is to design and develop IT tools and platforms to process single or a batch of documents to then distribute them using different channels (mails, letter, electronic document management, electronic signature, etc.)."+
+						  "These tools are application that I developed using python, for the batch processing and distribution, while the platforms were made of backend and frontend applications developed in Java and Angular, for the single document processing and distribution."+
+						  " I was also involved in bug fixings and CI/CD processes using GitLab, Jenkins, Kubernetes, and other internal applications. "+
+						  "</p>",
+						  
+						    
 		
 		  'categories': ['Software Engineering','Web development', 'Data Engineering' ],
-		  'tools': ['Python', 'Java', 'Javascript', 'Angular', 'Node.js', 
+		  'tools': ['Python', 'Java', 'Javascript', 'Angular', 'Node.js', 'Jenkins', 'Spring',		  
 					'HTML', 'Git', 'CSS', 'SQLite', 'Microsoft SQL Server', 'Spring Boot'],
 		  'projects':['Job Experience'],
 		  'subcategories':['CI/CD', 'Testing', 'Agile', 'DevOps', 'Gitlab']

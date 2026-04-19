@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
 												  '</div>'
 		
 				},
-	"programming_skills":[{'name':'Software Development', 'num': 95},{'name':'Software Engineering', 'num': 90},{'name':'Web Development', 'num': 97},
-						{'name':'C++', 'num': 94},{'name':'Python', 'num': 83},{'name':'C', 'num': 80},
-						{'name':'Java', 'num': 86},{'name':'JavaScript', 'num': 94},{'name':'SQLite', 'num': 95},{'name':'MySQL', 'num': 91},{'name':'MongoDB', 'num': 90},
-						{'name':'PostgreSQL', 'num': 87},{'name':'Qt', 'num': 95},{'name':'QtQuick', 'num': 95},{'name':'QML', 'num': 95},{'name':'PHP', 'num': 94}, {'name':'HTML5', 'num': 96},
+	"programming_skills":[{'name':'Software Development', 'num': 95},{'name':'Software Engineering', 'num': 95},{'name':'CI/CD', 'num': 90},{'name':'Web Development', 'num': 97},
+						{'name':'C++', 'num': 94},{'name':'Python', 'num': 90},{'name':'C', 'num': 80},
+						{'name':'Java', 'num': 90},{'name':'JavaScript', 'num': 94},{'name':'SQLite', 'num': 95},{'name':'MySQL', 'num': 91},{'name':'MongoDB', 'num': 90},
+						{'name':'PostgreSQL', 'num': 87},{'name':'Spring Boot', 'num': 85},{'name':'Qt', 'num': 95},{'name':'QtQuick', 'num': 95},{'name':'QML', 'num': 95},{'name':'PHP', 'num': 94}, {'name':'HTML5', 'num': 96},
 						{'name':'XHTML', 'num': 90}, {'name':'CSS', 'num': 93}, {'name':'Node.js', 'num': 90},{'name':'React.js', 'num': 83}, 
-						{'name':'Angular', 'num': 88},{'name':'TypeScript', 'num': 97},{'name':'JQuery', 'num': 96},{'name':'PlayFramework', 'num': 84}],
+						{'name':'Angular', 'num': 90},{'name':'TypeScript', 'num': 97},{'name':'JQuery', 'num': 96},{'name':'PlayFramework', 'num': 84}],
 	"datascience_skills":[{'name':'Machine Learning', 'num': 90},{'name':'Deep Learning', 'num': 93},
 						{'name':'Statistics', 'num': 85},{'name':'Reinforcement Learning', 'num': 89},{'name':'Computer Vision', 'num': 90},
 						{'name':'Natural Language Processing', 'num': 75},{'name':'Scikit-Learn', 'num': 98},{'name':'Tensorflow', 'num': 80},

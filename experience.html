@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>experience.log — Christian Bile</title>
+  <meta name="description" content="Work experience of Christian Bile: 10 roles across industry, consulting and research labs — from C++/Qt desktop systems in Italy to Kubernetes-deployed platforms and deep-learning research in France.">
+  <meta name="author" content="Christian Prince Carlos Bile">
+  <meta name="theme-color" content="#07090C">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Christian Bile">
+  <meta property="og:title" content="Experience — Christian Bile">
+  <meta property="og:url" content="https://chrissbill23.github.io/experience.html">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/v2.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body data-page="experience" data-contact-comment="// EOF ─── contact">
+  <header id="site-nav" class="nav"></header>
+
+  <main>
+    <header class="phead lined c-green">
+      <div class="wrap">
+        <div class="cmt">// ~/career/experience.log</div>
+        <div class="trow"><span class="dollar">$</span><h1>git log --graph --all</h1></div>
+        <p class="sub">12 commits across industry, consulting and research labs — from C++/Qt desktop systems in Italy to Kubernetes-deployed platforms and deep-learning research in France.</p>
+        <div id="branches" class="branches" data-note="🇮🇹 Italy → 🇫🇷 France"></div>
+      </div>
+    </header>
+
+    <!-- tech filter console -->
+    <section class="wrap console-wrap" aria-label="Filter by technology">
+      <div class="console">
+        <div class="qbar">
+          <label id="qinput" class="qinput">
+            <i data-lucide="funnel"></i>
+            <span class="pfx">$&nbsp;</span><span class="cmd">git log&nbsp;</span><span class="flag">--tech=</span>
+            <input id="tech-input" type="text" autocomplete="off" spellcheck="false" placeholder="type a language, library or tool…" aria-label="Filter experience by technology">
+          </label>
+          <span id="result" class="result is-quiet"><i></i><span id="result-text">10 commits</span></span>
+          <button id="clear" class="clear" type="button"><i data-lucide="x"></i>clear</button>
+        </div>
+        <div id="facets" class="facets"></div>
+        <div id="opts" class="opts"></div>
+      </div>
+    </section>
+
+    <!-- timeline -->
+    <section class="wrap timeline" aria-label="Career timeline">
+      <div class="rail" aria-hidden="true"></div>
+      <div id="timeline-items"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+  <noscript><p style="padding:24px;text-align:center">This site renders its content with JavaScript. Resume: <a href="en_cv_Bile_Christian.pdf">en_cv_Bile_Christian.pdf</a></p></noscript>
+  <script src="js/data/profile.js"></script>
+  <script src="js/data/works.js"></script>
+  <script src="js/data/education.js"></script>
+  <script src="js/dataloader.js"></script>
+</body>
+</html>

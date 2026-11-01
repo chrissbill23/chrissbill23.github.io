@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>projects/ — Christian Bile</title>
+  <meta name="description" content="Projects by Christian Bile — research, coursework and side builds in deep learning, computer vision, reinforcement learning, graphics and software engineering.">
+  <meta name="author" content="Christian Prince Carlos Bile">
+  <meta name="theme-color" content="#07090C">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Christian Bile">
+  <meta property="og:title" content="Projects — Christian Bile">
+  <meta property="og:url" content="https://chrissbill23.github.io/projects.html">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/v2.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body data-page="projects" data-contact-comment="// EOF ─── contact">
+  <header id="site-nav" class="nav"></header>
+
+  <main>
+    <header class="phead c-cyan">
+      <div class="wrap">
+        <div class="cmt">// ~/projects — research, coursework &amp; side builds</div>
+        <div class="trow"><span class="dollar">$</span><h1>ls -la ./projects</h1></div>
+        <div class="toolbar">
+          <div class="filters"><span class="flag">--filter=</span><span id="pchips" class="filters"></span></div>
+          <label id="prj-search" class="search">
+            <i data-lucide="search"></i>
+            <input id="prj-q" type="search" autocomplete="off" spellcheck="false" placeholder='grep -ri "vision"' aria-label="Search projects">
+            <i class="cursor" aria-hidden="true"></i>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <section class="wrap pbody">
+      <aside class="explorer" aria-label="Project folders">
+        <div class="ehead"><span class="t">EXPLORER</span><span id="explorer-count" class="n"></span></div>
+        <div id="tree" class="tree"></div>
+        <div class="efoot"><span>$ git remote -v</span><a id="remote" class="remote" href="#" target="_blank" rel="noopener"></a></div>
+      </aside>
+      <div id="dirs" class="dirs"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+
+  <noscript><p style="padding:24px;text-align:center">This site renders its content with JavaScript. Projects live at <a href="https://github.com/chrissbill23">github.com/chrissbill23</a>.</p></noscript>
+  <script src="js/data/profile.js"></script>
+  <script src="js/data/works.js"></script>
+  <script src="js/data/education.js"></script>
+  <script src="js/dataloader.js"></script>
+</body>
+</html>

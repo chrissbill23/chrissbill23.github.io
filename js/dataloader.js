@@ -51,7 +51,7 @@
     var all = EXP.slice().sort(function (a, b) { return b.start.localeCompare(a.start); });
     return all.length ? all[0].id : null;
   }
-  function headLabel(e) { return 'HEAD -> ' + e.branch; }
+  function headLabel(e) { return e.branch + ' · current'; }
 
   var page = document.body.getAttribute('data-page') || '';
 
@@ -220,7 +220,7 @@
           }).join('') + '</div>' +
         '</div>' +
         '<div class="train"><div class="head"><span>' + esc((P.training || {}).task) + '</span><span class="g">' + esc((P.training || {}).epoch) + '</span></div>' +
-          '<div class="prog" role="progressbar" aria-label="fine-tuning progress"><i></i></div></div>';
+          '<div class="prog" role="progressbar" aria-label="career progress"><i></i></div></div>';
     }
 
     var met = $('#metrics');
@@ -238,7 +238,7 @@
         '<div class="graph"><div class="hash"><i class="node"></i><span>' + esc(e.hash) + '</span></div>' +
           '<div class="br">(' + esc(e.id === headId ? headLabel(e) : e.branch) + ')</div>' +
           '<div class="date">' + (ys === ye ? ys : ys + ' — ' + ye) + '</div></div>' +
-        '<div class="msg"><div class="title"><h3>' + esc(e.company) + '</h3><span class="role">feat: ' + esc(e.role) + '</span></div>' +
+        '<div class="msg"><div class="title"><h3>' + esc(e.company) + '</h3><span class="role">' + esc(e.role) + '</span></div>' +
           '<p>' + esc(f.summary || e.desc) + '</p></div>' +
         '<div class="tags">' + (f.chips || e.tech || []).map(function (t) { return '<span class="chip">' + esc(t) + '</span>'; }).join('') + '</div>' +
       '</article>';
@@ -289,7 +289,7 @@
     if (leg) {
       var years = [];
       EXP.forEach(function (e) { years.push(+year(e.start)); years.push(+year(e.end)); });
-      leg.innerHTML = '<span class="lbl">branches:</span>' +
+      leg.innerHTML = '<span class="lbl">tracks:</span>' +
         Object.keys(BRANCH).map(function (b) { return '<span class="bitem ' + cls(BRANCH[b]) + '"><i></i>' + b + '</span>'; }).join('') +
         '<span class="range">│&nbsp;&nbsp;' + Math.min.apply(null, years) + ' → ' + Math.max.apply(null, years) + '&nbsp;&nbsp;│&nbsp;&nbsp;' + esc(leg.getAttribute('data-note') || '') + '</span>';
     }
@@ -339,7 +339,7 @@
         return '<div class="opt"><span class="k">--' + o[0] + '</span>' + o[1].map(function (v) {
           return '<button type="button" class="radio' + (state[o[0]] === v ? ' is-on' : '') + '" data-opt="' + o[0] + '" data-val="' + v + '" aria-pressed="' + (state[o[0]] === v) + '"><i></i>' + v + '</button>';
         }).join('') + '</div>';
-      }).join('') + '<span class="tip">tip: combine flags, e.g. --tech=python,kubernetes --match=all</span>';
+      }).join('') + '<span class="tip">tip: combine filters, e.g. --tech=python,kubernetes --match=all</span>';
     }
 
     var headId = newestMainId();
@@ -348,7 +348,7 @@
 
     function tagHtml(d) {
       return '<div class="ttag c-pink"><div class="graph"><i class="node"></i></div><div class="tbody">' +
-        '<span class="tpill">' + ic('tag') + 'tag: ' + esc(d.tag) + '</span>' +
+        '<span class="tpill">' + ic('tag') + 'milestone ' + esc(d.tag) + '</span>' +
         '<span class="deg">🎓 ' + esc(d.degree) + '</span>' +
         '<span class="school">— ' + esc(d.school) + ' · ' + esc(String(d.place || '').split(',')[0]) + ' · ' + d.years[0] + ' — ' + d.years[1] + '</span>' +
       '</div></div>';
@@ -361,12 +361,12 @@
         '<div class="graph"><i class="node"></i></div>' +
         '<div class="meta"><div class="date">' + fmtMonth(e.start) + ' — ' + fmtMonth(e.end) + '</div><div class="loc">' + esc(e.location) + '</div></div>' +
         '<div class="card">' +
-          '<div class="top"><span class="hash">commit ' + esc(e.hash) + '</span><span class="pill">' + esc(isHead ? headLabel(e) : e.branch) + '</span>' +
+          '<div class="top"><span class="hash">#' + esc(e.hash) + '</span><span class="pill">' + esc(isHead ? headLabel(e) : e.branch) + '</span>' +
             (hit ? '<span class="match">' + ic('check') + 'matches --tech=' + esc(m.hits.join(',')) + '</span>' : '') + '</div>' +
           '<div class="body">' +
-            '<div class="title"><h3>' + esc(e.company) + '</h3><span class="role">feat(' + esc(e.role) + ')</span></div>' +
+            '<div class="title"><h3>' + esc(e.company) + '</h3><span class="role">' + esc(e.role) + '</span></div>' +
             '<p>' + esc(e.desc) + '</p>' +
-            (stack.length ? '<div class="diff"><span class="lbl">diff --stack</span><div class="adds">' + stack.map(function (s) {
+            (stack.length ? '<div class="diff"><span class="lbl">stack used</span><div class="adds">' + stack.map(function (s) {
               var sl = slug(s);
               var h = hit && m.hits.some(function (t) { return sl === t || sl.indexOf(t) >= 0 || t.indexOf(sl) >= 0; });
               return '<span class="add' + (h ? ' is-hit' : '') + '">+ ' + esc(s) + '</span>';
@@ -392,7 +392,7 @@
         return commitHtml(e, m);
       }).join('');
       var rt = $('#result-text'), r = $('#result');
-      if (rt) rt.textContent = state.terms.length ? hits + ' / ' + shown + ' commits match' : shown + ' commits';
+      if (rt) rt.textContent = state.terms.length ? hits + ' / ' + shown + ' roles match' : shown + ' roles';
       if (r) r.classList.toggle('is-quiet', !state.terms.length);
     }
 
@@ -438,7 +438,7 @@
       if (parts.length > 1) t.children.push(d); else t.self = d;
     });
 
-    var ec = $('#explorer-count'); if (ec) ec.textContent = total + ' files';
+    var ec = $('#explorer-count'); if (ec) ec.textContent = total + ' projects';
     var remote = $('#remote'); if (remote) { remote.textContent = P.githubLabel || P.github; remote.setAttribute('href', P.github); }
 
     function treeHtml() {
@@ -466,7 +466,10 @@
     }
     function hit(p) {
       var q = state.q.trim().toLowerCase();
-      return !q || [p.title, p.desc, p.tag, p.file, p.lang, p.dir].join(' ').toLowerCase().indexOf(q) >= 0;
+      var st = p.study || {};
+      var extra = [st.pitch, st.solves].concat(st.architecture || [], st.stack || [],
+        (st.challenges || []).map(function (c) { return c.q + ' ' + c.a; }));
+      return !q || [p.title, p.desc, p.tag, p.file, p.lang, p.dir].concat(extra).join(' ').toLowerCase().indexOf(q) >= 0;
     }
     function cardHtml(p) {
       var tag = p.url ? 'a' : 'div';
@@ -477,6 +480,33 @@
           '<div class="cfoot"><span class="tag">' + esc(p.tag) + '</span><span class="meta">' + esc(p.year) + (p.url ? ic('arrow-up-right') : '') + '</span></div></div>' +
       '</' + tag + '>';
     }
+    function studyHtml(p) {
+      var st = p.study;
+      var link = p.url
+        ? '<a class="open" href="' + esc(p.url) + '" target="_blank" rel="noopener">open repo ' + ic('arrow-up-right') + '</a>'
+        : '<span class="priv">' + ic('lock') + (p.repo === 'private' ? 'private repo · walkthrough on request' : '') + '</span>';
+      return '<article class="study" id="p-' + esc(p.id) + '">' +
+        '<div class="ctab"><span class="file"><i class="dot"></i>' + esc(p.file) + 'README.md</span><span class="lang">' + esc(p.lang) + '</span></div>' +
+        '<div class="sbody">' +
+          '<div class="shd"><h3>' + esc(p.title) + '</h3><span class="tag">' + esc(p.tag) + '</span><span class="meta">' + esc(p.year) + '</span>' + link + '</div>' +
+          '<p class="pitch">' + esc(st.pitch || p.desc) + '</p>' +
+          '<div class="sgrid">' +
+            '<div class="scol"><section><div class="sh">## what_it_solves</div><p>' + esc(st.solves) + '</p></section>' +
+              '<section><div class="sh">## stack</div><div class="chips">' + (st.stack || []).map(function (t) { return '<span class="chip">' + esc(t) + '</span>'; }).join('') + '</div></section></div>' +
+            '<section><div class="sh">## architecture</div><ul>' + (st.architecture || []).map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ul></section>' +
+          '</div>' +
+          '<section><div class="sh">## challenges → how I solved them</div><div class="chals">' + (st.challenges || []).map(function (c) {
+            return '<div class="chal"><div class="q"><span class="faint">- [x] </span>' + esc(c.q) + '</div><div class="a"><span class="g">→ </span>' + esc(c.a) + '</div></div>';
+          }).join('') + '</div></section>' +
+          '<div class="sfoot">' +
+            '<div class="kvs">' + (st.results || []).map(function (r) {
+              return '<span class="kv"><span class="faint">&gt;&gt;&gt; </span><span class="cy">' + esc(r[0]) + '</span><span class="faint"> = </span><span class="am b">' + esc(r[1]) + '</span></span>';
+            }).join('') + '</div>' +
+            (st.status ? '<div class="sstatus"><span class="faint"># status: </span>' + esc(st.status) + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</article>';
+    }
     function dirsHtml() {
       var any = false;
       var h = DIRS.map(function (d) {
@@ -484,13 +514,16 @@
         var ps = PRJ.filter(function (p) { return p.dir === d.path && hit(p); });
         if (!ps.length) return '';
         any = true;
+        var studies = ps.filter(function (p) { return p.study; }), plain = ps.filter(function (p) { return !p.study; });
         return '<section class="dir ' + cls(d.color) + '" id="dir-' + d.path.replace(/\//g, '-') + '">' +
           '<div class="dhead">' + ic('folder-open') + '<span class="path">./' + esc(d.path) + '/</span><span class="n">(' + ps.length + ')</span></div>' +
-          '<div class="prow">' + ps.map(cardHtml).join('') + '</div></section>';
+          (d.note ? '<div class="dnote">// ' + esc(d.note) + '</div>' : '') +
+          (studies.length ? '<div class="studies">' + studies.map(studyHtml).join('') + '</div>' : '') +
+          (plain.length ? '<div class="prow">' + plain.map(cardHtml).join('') + '</div>' : '') + '</section>';
       }).join('');
       return any ? h :
-        '<div class="empty"><span class="g">$ </span>grep -ri "' + esc(state.q) + '" ./projects<br>' +
-        '<span class="dim">grep: no matches — try another keyword or <button type="button" class="linkbtn" id="reset-prj">clear filters</button></span></div>';
+        '<div class="empty"><span class="g">$ </span>search "' + esc(state.q) + '" ./projects<br>' +
+        '<span class="dim">no matches — try another keyword or <button type="button" class="linkbtn" id="reset-prj">clear filters</button></span></div>';
     }
     function chipsHtml() {
       return FILTERS.map(function (f) {
@@ -558,7 +591,7 @@
     var N = A.neofetch || {};
     var nf = $('#neofetch');
     if (nf) nf.innerHTML =
-      '<div class="cmd">$ neofetch</div>' +
+      '<div class="cmd">$ quick_facts</div>' +
       '<div class="nf"><div class="logo"><span class="big">' + esc(N.logo) + '</span><span class="ver">' + esc(N.version) + '</span></div>' +
         '<div class="info"><div class="uh"><span class="g">' + esc(P.user) + '</span><span class="faint">@</span><span class="cy">' + esc(P.host) + '</span></div>' +
           '<div class="rule">─────────────────</div>' +
@@ -570,7 +603,7 @@
     function win(w) {
       if (!w) return '';
       return '<div class="term skillwin ' + cls(w.color) + '">' + termBar(w.title, '<i class="livedot"></i>running') +
-        '<div class="term-body"><div class="pyline"><span class="faint">&gt;&gt;&gt;  </span>model.predict(domain=\'' + esc(w.domain) + '\')</div>' +
+        '<div class="term-body"><div class="pyline"><span class="faint">&gt;&gt;&gt;  </span>self.rate(domain=\'' + esc(w.domain) + '\')</div>' +
         (w.items || []).map(function (it) {
           var n = Math.round(it[1] * 20);
           return '<div class="srow"><span class="lbl">' + esc(it[0]) + '</span><span class="bar"><span class="fill">' + new Array(n + 1).join('█') + '</span><span class="rest">' + new Array(20 - n + 1).join('░') + '</span></span><span class="val">' + it[1].toFixed(2) + '</span></div>';
@@ -578,7 +611,7 @@
     }
     var sk = $('#skills'); if (sk) sk.innerHTML = win(SK.ai) + win(SK.eng);
     var also = $('#also');
-    if (also) also.innerHTML = '<div class="lbl"># also shipped to production:</div><div class="chips">' +
+    if (also) also.innerHTML = '<div class="lbl"># also used in production:</div><div class="chips">' +
       (SK.alsoShipped || []).map(function (t) { return '<span class="chip c-cyan">' + esc(t) + '</span>'; }).join('') + '</div>';
 
     var yl = [];

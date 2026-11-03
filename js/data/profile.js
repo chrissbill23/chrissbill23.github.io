@@ -18,53 +18,53 @@ SITE.profile = {
   githubLabel: "github.com/chrissbill23",
   linkedin: "https://www.linkedin.com/in/christian-prince-bile/",
   web: "chrissbill23.github.io",
-  location: "Paris, France",
-  locationShort: "Paris, FR",
+  location: "European Union",
+  locationShort: "EU",
   languages: "EN · FR · IT",
   version: "v2.0.0",
 
   /* ---------- home.sh ---------- */
   hero: {
     boot: [
-      { t: "0.000", msg: "booting christian.v5 kernel" },
-      { t: "0.041", msg: "loading weights  polytechnique_msc_ai.ckpt", ok: true },
-      { t: "0.087", msg: "mounting /experience  12 roles · 5+ years", ok: true },
-      { t: "0.112", msg: "importing stack  java python typescript react c++ pytorch", ok: true }
+      { t: "0.000", msg: "starting christian.v5" },
+      { t: "0.041", msg: "loading education  master_ai_polytechnique · bachelor_cs_padova", ok: true },
+      { t: "0.087", msg: "loading experience  12 roles · 5+ years", ok: true },
+      { t: "0.112", msg: "loading skills  java python typescript react c++ pytorch", ok: true }
     ],
     bio:
       "Building reliable software products and scalable systems. " +
       "5+ years shipping Java, Python, C++, React and Angular platforms in "+
       "insurance, business management, health-tech, aerospace and travel. I have a Master's in AI from " +
-      "École Polytechnique and Bachelor in Computer Science from Università di Padova.",
+      "École Polytechnique and a Bachelor's in Computer Science from Università di Padova.",
     primaryCta: { label: "$ ./view --experiences", href: "experience.html" },
-    secondaryCta: { label: "cd projects/", href: "projects.html" }
+    secondaryCta: { label: "open projects/", href: "projects.html" }
   },
 
   modelCard: {
     name: "Christian Bile",
-    role: ["Software Eng", "AI Eng"],
-    now: "Latitude · Reims",
+    role: ["Software Engineer", "AI Engineer"],
+    currently: "Latitude · Reims",
     experience_years: 5,
     education: { master: "AI @ École Polytechnique", bachelor: "Computer Science @ Univ. of Padova" },
     stack: ["java", "python", "angular", "react"],
-    domains: ["backend", "frontend", "software", "applied AI"],
+    domains: ["backend", "frontend", "applied AI"],
     open_to_work: true
   },
 
-  training: { task: "fine_tuning on: your_team.problems()", epoch: "epoch 05/∞" },
+  training: { task: "currently: solving your_team.problems()", epoch: "year 05/∞" },
 
   metrics: [
     { key: "years_exp", value: "5+", desc: "production engineering", color: "green" },
     { key: "roles", value: "12", desc: "industry + research labs", color: "cyan" },
-    { key: "degrees", value: "2", desc: "BSc CS · MScT AI", color: "violet" },
+    { key: "degrees", value: "2", desc: "Bachelor CS · Master AI", color: "violet" },
     { key: "projects", value: "20+", desc: "Web · ML · CV · RL", color: "amber" },
     { key: "countries", value: "2", desc: "Italy → France", color: "pink" }
   ],
 
-  /* ids from works.js (SITE.experience) shown in "git log --oneline -3" */
+  /* ids from works.js (SITE.experience) shown in "featured --latest -3" */
   featuredExperience: ["latitude", "delane", "ag2r"],
 
-  /* ids from works.js (SITE.projects) shown in "ls projects/ --top 3",
+  /* ids from works.js (SITE.projects) shown in "list projects/ --top 3",
      with the copy used by the home cards */
   featuredProjects: [
     {
@@ -108,7 +108,7 @@ SITE.profile = {
       ["email", "christian2tv@gmail.com"],
       ["github", "github.com/chrissbill23"],
       ["web", "chrissbill23.github.io"],
-      ["based_in", "Paris, France 🇫🇷"],
+      ["based_in", "European Union 🇪🇺"],
       ["languages", "EN · FR · IT"],
       ["status", "available ✓", "green"]
     ]
@@ -136,7 +136,7 @@ SITE.profile = {
       { kind: "li", text: "- Software & AI engineer · 5+ years in production" },
       { kind: "li", text: "- Now @ Latitude (Reims): the SaaS that configures, builds" },
       { kind: "li", text: "  and launches a European small-sat rocket — Java/Spring Boot, React" },
-      { kind: "li", text: "- MScT AI @ École Polytechnique · BSc CS @ Padova" },
+      { kind: "li", text: "- Master's in AI @ École Polytechnique · Bachelor's in CS @ Padova" },
       { kind: "li", text: "- Built in Italy 🇮🇹, shipping in France 🇫🇷" },
       { kind: "blank" },
       { kind: "h2", text: "## Story" },
@@ -148,7 +148,7 @@ SITE.profile = {
       { kind: "p", text: "pipelines and AI for health, marketing, travel & insurance" },
       { kind: "p", text: "— two years of Python/Java/Angular platforms at AG2R La" },
       { kind: "p", text: "Mondiale, then geo-economic R&D on France's medical" },
-      { kind: "p", text: "deserts (pandas + OSRM pipelines). In 2026 I joined" },
+      { kind: "p", text: "deserts (geographic data pipelines). In 2026 I joined" },
       { kind: "p", text: "Latitude to build the tools behind a rocket." },
       { kind: "blank" },
       { kind: "h2", text: "## Goal" },
@@ -163,12 +163,12 @@ SITE.profile = {
       version: "v5.0",
       rows: [
         ["Role", "Software Engineer @ Latitude"],
-        ["Uptime", "5+ yrs in production"],
-        ["Host", "Paris, France"],
-        ["Kernel", "MScT AI · École Polytechnique"],
-        ["Shell", "zsh · bash · git"],
-        ["Langs", "Java Python TS C++ Go"],
-        ["Locale", "EN · FR · IT"],
+        ["Experience", "5+ yrs in production"],
+        ["Based in", "European Union"],
+        ["Education", "Master's AI · École Polytechnique"],
+        ["Tools", "git · Docker · CI/CD"],
+        ["Code", "Java Python TS C++ Go"],
+        ["Speaks", "EN · FR · IT"],
         ["Focus", "back-end · SaaS · ML"],
         ["Hobbies", "music · travel · film"]
       ],
@@ -178,7 +178,7 @@ SITE.profile = {
 
   skills: {
     ai: {
-      title: "ai_model.predict()", domain: "ai", color: "violet",
+      title: "ai_skills — self-assessed", domain: "ai", color: "violet",
       items: [
         ["Deep Learning", 0.93], ["Machine Learning", 0.90], ["Computer Vision", 0.90],
         ["Reinforcement L.", 0.89], ["Statistics", 0.85], ["NLP", 0.75],
@@ -187,7 +187,7 @@ SITE.profile = {
       ]
     },
     eng: {
-      title: "eng_model.predict()", domain: "eng", color: "green",
+      title: "engineering_skills — self-assessed", domain: "engineering", color: "green",
       items: [
         ["Web Development", 0.97], ["TypeScript", 0.97], ["Software Eng.", 0.95],
         ["Qt / QML", 0.95], ["SQL (SQLite)", 0.95], ["C++", 0.94],
@@ -202,7 +202,7 @@ SITE.profile = {
     ]
   },
 
-  /* ---------- experience.log filter facets ----------
+  /* ---------- experience page filter facets ----------
      Keys are the tech slugs (lower-case, spaces -> "-") used in
      SITE.experience[].tech. Anything not listed lands in "other". */
   techCategories: [

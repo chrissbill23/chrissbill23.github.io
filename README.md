@@ -8,8 +8,8 @@ Static HTML/CSS/JS, no build step — push to `master` and GitHub Pages serves i
 | file              | nav tab          | content                                              |
 |-------------------|------------------|------------------------------------------------------|
 | `index.html`      | `home.sh`        | hero, metrics, featured experience/projects, stack   |
-| `experience.html` | `experience.log` | git-log timeline with a tech filter console          |
-| `projects.html`   | `projects/`      | explorer + project cards, category chips, grep box   |
+| `experience.html` | `experience.log` | career timeline with a tech filter console           |
+| `projects.html`   | `projects/`      | explorer + project cards, category chips, search box |
 | `about.html`      | `about.md`       | bio editor, neofetch, skills, education              |
 
 `works.html`, `education.html` and `contact.html` are redirects kept for old links.
@@ -20,7 +20,7 @@ All content is plain JavaScript objects — edit these, nothing else:
 
 - `js/data/profile.js` — identity, hero copy, metrics, skills, contact, about, stack layers, filter facets
 - `js/data/works.js` — `SITE.experience` (jobs/internships) and `SITE.projects` (+ `SITE.projectDirs`)
-- `js/data/education.js` — degrees (also drive the `tag: vX.0.0` markers in the timeline)
+- `js/data/education.js` — degrees (also drive the `milestone vX.0.0` markers in the timeline)
 
 `js/dataloader.js` renders every page from that data; `js/fx.js` is the WebGL
 neural-field background of the home hero; `css/v2.css` holds the theme.

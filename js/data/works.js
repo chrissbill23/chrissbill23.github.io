@@ -14,6 +14,9 @@
      dir       one of SITE.projectDirs[].path
      file      the "filename" shown in the card tab
      url       GitHub (or other) link; omit if private
+     repo      "private" shows "private repo" in place of a link
+     study     { pitch, solves, architecture[], stack[], challenges[{q,a}],
+               results[[k,v]], status } -> full-width case-study card
    ------------------------------------------------------------------ */
 window.SITE = window.SITE || {};
 
@@ -138,6 +141,8 @@ SITE.experience = [
 /* Directories of the projects/ explorer, in display order.
    `filter` is the chip in the toolbar that selects this dir. */
 SITE.projectDirs = [
+  { path: "asata",               color: "green",  filter: "asata",
+    note: "Asata — a suite of SaaS products I design, build and run end-to-end since March 2026: one shared PostgreSQL, Java 25 / Spring Boot 4 services, Angular and React Native clients, Docker, CI, backups and monitoring." },
   { path: "ai/deep_learning",    color: "violet", filter: "ai" },
   { path: "ai/computer_vision",  color: "cyan",   filter: "vision" },
   { path: "ai/reinforcement",    color: "pink",   filter: "rl" },
@@ -150,14 +155,134 @@ SITE.projectDirs = [
 
 SITE.projectFilters = [
   { key: "all", label: "all" },
+  { key: "asata", label: "asata", match: ["asata"] },
   { key: "ai", label: "ai", match: ["ai/"] },
   { key: "vision", label: "vision", match: ["ai/computer_vision"] },
-  { key: "rl", label: "rl", match: ["ai/reinforcement"] },
+  { key: "rl", label: "reinforcement", match: ["ai/reinforcement"] },
   { key: "graphics", label: "graphics", match: ["graphics"] },
   { key: "software", label: "software", match: ["software/"] }
 ];
 
 SITE.projects = [
+/* ---- asata: products I design, build and run end-to-end ----
+   `study` turns a card into a full-width case study on projects/. */
+  { id: "mokili", dir: "asata", file: "mokili/", lang: "Java · Angular",
+    title: "Mokili — applications manager & DevOps console", year: "2026 —", tag: "DevOps console", repo: "private",
+    desc: "Where a team registers its applications, environments, versions and repositories, follows CI pipelines, launches deployments and runs its Scrum board.",
+    study: {
+      pitch: "The applications manager of Asata, and the catalogue the suite itself is registered in. A team keeps its applications, environments, roles, versions and source repositories in one place, and from there follows CI pipelines, streams job logs, launches deployments and runs a Scrum tracker.",
+      solves: "Small teams scatter the lifecycle of their software across GitHub, GitLab, spreadsheets and chat. Mokili ties application → version → repository → pipeline → deployment → environment into one traceable chain, scoped per team, with notifications when something lands.",
+      architecture: [
+        "Spring Boot backend split into 24 modules (auth, team, app info, environment, role, version, SCM connection, pipeline, webhook, deployment, tracker, notification, platform, console, CDN…), each with an API interface, controller, services and JPA entities.",
+        "GitHub Actions and GitLab CI pipelines arrive by signed webhooks (HMAC, constant-time comparison, each delivery processed once) with a 5-minute sync as safety net; deployments start the repository's own deploy workflow and a reconciler follows the run.",
+        "Angular 21 frontend on PrimeNG, signals for state, routes and sidebar driven by the user's permissions; 66 tracker screens and 16 deployment screens designed in Pencil for laptop, ultrawide and phone, light and dark.",
+        "JWT access tokens (15 min), refresh tokens stored hashed and rotated, optional Google OAuth2, permissions re-read per team on every request; connection secrets encrypted with AES-256-GCM, only the last 4 characters ever shown.",
+        "Shared PostgreSQL database (47 mokili_* tables) backed up with pgBackRest: WAL archiving, weekly full and daily differential, AES-256, weekly automated restore drill. Logos over 100 KB go to S3 (MinIO locally)."
+      ],
+      stack: ["Java 25", "Spring Boot 4", "Spring Security · OAuth2", "Spring Data JPA", "PostgreSQL 17", "Angular 21", "PrimeNG", "ApexCharts", "TypeScript 5.9", "S3 · MinIO", "Testcontainers", "Docker Compose", "nginx", "GitHub Actions", "pgBackRest"],
+      challenges: [
+        { q: "Launching a deployment when the provider's answer may be lost.",
+          a: "The provider is asked once, outside any transaction, with no automatic retry. A timeout makes the deployment `unknown` and a reconciler finds the run by the deployment id embedded in the workflow's run name. Final states can never be changed by a late event, and one deployment at a time per target is enforced by a unique index." },
+        { q: "Matching pipelines to versions without being fooled by late or re-run events.",
+          a: "Matched by commit, then by tag, never by branch name. Mokili always asks the provider for the latest commit instead of trusting the event, so a late delivery never moves a version back." },
+        { q: "A one-click “Connect GitHub” that cannot be hijacked.",
+          a: "A 32-byte single-use install state, stored as SHA-256 and valid 10 minutes; the user's OAuth code proves they can reach the installation, which must belong to the official app and to exactly one team. Installation tokens are cached until 5 minutes before expiry." },
+        { q: "Showing CI job logs without storing gigabytes.",
+          a: "Logs are streamed, never stored: the last 5,000 lines, at most 20 MB read from the end, ANSI colours and sections parsed, GitLab jobs followed live every 5 seconds." },
+        { q: "A tracker that is more than a board.",
+          a: "Backlog with 9 item types, sprints, burndown, increments tied to versions, and velocity, throughput, cycle-time and cumulative-flow reports." }
+      ],
+      results: [["tests", "305 backend"], ["modules", "24"], ["tables", "47"], ["screens designed", "80+"]],
+      status: "Active since March 2026, running on Docker Compose with CI on GitHub Actions; the deploy workflow is linted but not yet exercised on GitHub."
+    } },
+  { id: "umoja", dir: "asata", file: "umoja/", lang: "Java · Angular",
+    title: "Umoja — organizations, teams & identity", year: "2026", tag: "identity & teams", repo: "private",
+    desc: "SaaS where organizations manage people, hierarchical teams, app access, roles, approval workflows and billing; it also issues the tokens the other Asata services trust.",
+    study: {
+      pitch: "The identity and organization hub of Asata. Companies, administrations and associations manage their people, hierarchical teams, access to applications, roles and permissions, approval requests, offices and rooms, agenda and billing. Umoja also issues the access tokens that Oro and the other services trust.",
+      solves: "Every B2B product needs the same unglamorous core: who belongs to which organization and team, who may do what, how access is requested and approved, and who gets invoiced. Umoja builds it once, isolated per organization, so each product only has to plug in.",
+      architecture: [
+        "Spring Boot backend at /umoja behind nginx, which proxies Oro on the same origin (no CORS); Caddy in front in production for HTTPS, HSTS, security headers and SSE flushing.",
+        "Angular 21 frontend with standalone components and signals: an employee side (my apps, my teams, requests, agenda, messages, notifications, profile), an organization admin console, and a platform-staff area with the app marketplace and pricing plans per country.",
+        "31 umoja_* tables on the shared PostgreSQL schema: hierarchical teams, memberships with lifecycle states, service-scoped roles, resource:action permissions, configurable request types with approval chains, audit log, subscriptions and invoices.",
+        "Auth: bcrypt passwords, RS256 JWT access tokens (15 min) with a published JWKS and key rotation, refresh tokens in an HttpOnly cookie stored as SHA-256 and rotated per family, lockout after 5 failed attempts.",
+        "Integration: membership snapshots pushed to Oro, notifications through Sululu from a transactional outbox (localized en · fr · es · pt), a live bell fanned out to browsers over SSE, S3-compatible CDN for media, OpenStreetMap address autocomplete."
+      ],
+      stack: ["Java 25", "Spring Boot 4.1", "Spring Security · OAuth2", "Spring Data JPA", "PostgreSQL 17", "Angular 21", "PrimeNG 21", "TypeScript 5.9", "RxJS", "Vitest", "Testcontainers", "AWS S3 SDK", "Docker Compose", "nginx", "Caddy"],
+      challenges: [
+        { q: "Let other services trust Umoja's users without sharing a secret.",
+          a: "Moved from a shared HS256 secret to RS256 tokens with a JWKS endpoint, audience checks and rotatable keys. Oro verifies tokens and holds nothing that could sign one." },
+        { q: "A stolen refresh token must not give lasting access.",
+          a: "Tokens are stored hashed, rotated inside a family, and any reuse of a replaced token revokes the whole family, with a 30 s grace so two tabs refreshing at once do not lock the user out." },
+        { q: "Oro must never re-grant an access that Umoja revoked, even if a sync arrives late.",
+          a: "Snapshots are versioned by read time and reconciled every 10 minutes; a stale snapshot is ignored instead of applied." },
+        { q: "Approval workflows that execute actions must not corrupt a request when the action fails.",
+          a: "Built-in actions run in their own transaction on final approval. If it fails, the request stays approved for an admin to complete by hand." },
+        { q: "One organization must never see another.",
+          a: "Cross-organization administration lives under /platform behind a dedicated permission. An integration test sends another organization's ids to every endpoint and asserts nothing is read or changed." }
+      ],
+      results: [["tests", "271 backend · 186 frontend"], ["languages", "en · fr · es · pt"], ["data model", "31 tables + shared identity"]],
+      status: "Functionally complete for a first launch; CDN and external OAuth login are in place but off by default; no payment provider yet."
+    } },
+  { id: "oro", dir: "asata", file: "oro/", lang: "Java · React Native",
+    title: "Oro — real-time messaging", year: "2026", tag: "messaging",
+    url: "https://github.com/chrissbill23/oro",
+    desc: "Privacy-first messaging service shared by two products: personal chat (Oro) and workplace chat inside Umoja, with live streams, Web Push and an iOS/Android app.",
+    study: {
+      pitch: "The messaging service of Asata, shared by two products: Oro for personal messaging (friends, family groups, communities) and Umoja for workplace messaging (direct messages, groups, one chat per team). Real-time over Server-Sent Events, Web Push notifications, and a mobile app for iOS and Android.",
+      solves: "Chat looks simple and is not: strict message order, retries that never duplicate, receipts, catching up after being offline, thousands of open streams, files that may carry malware, and privacy rules (requests from strangers, blocks, no history for newcomers, GDPR export and erasure). Oro solves all of that once, for both products.",
+      architecture: [
+        "One Spring Boot service at /oro over the shared PostgreSQL 17 database: 16 tables, 27 row-level-security policies, 16 triggers and 21 functions in plain SQL with a versioned migration runner.",
+        "Product isolation in the schema itself: every row carries a product id and every reference is a composite foreign key, so the database keeps an Oro user out of a Umoja conversation.",
+        "Transactional outbox → in-memory LiveHub → one SSE stream per user, each with its own bounded queue and virtual-thread writer; events carry ids only and clients re-read content through the API.",
+        "Attachments: type sniffed from the bytes with Apache Tika, EXIF stripped, ClamAV scan that fails closed, purge job and restic backups. Web Push (RFC 8291 / 8292) implemented with the JDK only.",
+        "Identity: Umoja users verified through its JWKS; Oro's own accounts sign RS256 tokens with rotated refresh tokens (cookie for browsers, Keychain / Keystore for the app). Prometheus + Alertmanager with 20 alert rules, ECS logs that never hold message text.",
+        "Mobile app in Expo / React Native with expo-router, TanStack Query and FlashList, designed in Pencil for light and dark themes."
+      ],
+      stack: ["Java 25", "Spring Boot 4.1", "PostgreSQL 17", "Spring Security", "SSE", "Web Push", "Apache Tika", "ClamAV", "React Native 0.88", "Expo 58", "React 19", "TypeScript", "TanStack Query", "Testcontainers", "k6", "Java Flight Recorder", "Prometheus", "Alertmanager", "Caddy", "GitHub Actions"],
+      challenges: [
+        { q: "Strict order and safe retries inside a conversation.",
+          a: "Each send locks the conversation row and takes the next sequence number, so there are no gaps and no reordering. A client message id is unique per sender and conversation, so a retry, even a concurrent one, returns the stored message. Receipts are positions, not per-message rows." },
+        { q: "Catching up after disconnects and restarts without replaying events.",
+          a: "Every stream `hello` makes the client re-read what changed since its last sequence. Under load, a restart lost none of ~58,000 messages and 300 of 300 tracked clients caught up." },
+        { q: "Message search took 5 s for a heavy user: ILIKE is not leakproof under row-level security, so the trigram index was skipped.",
+          a: "A SECURITY DEFINER search function re-applies the RLS rule and uses the index: 5,030 ms → 663 ms for a power user, 16 ms → 2 ms for a typical one." },
+        { q: "A graceful stop took over 45 s and one slow client could block everyone.",
+          a: "Presence fan-out was O(n²): indexing streams by organization cut the hub's work from 1,715 ms to 505 ms for 5,000 reconnects; per-stream queues isolate slow consumers; a stop now takes 0.2 s." },
+        { q: "A security self-audit found 10 confirmed defects.",
+          a: "All fixed: the API login could escalate to the system role, internal endpoints were reachable from the internet, streams outlived revoked tokens, interleaved syncs could restore revoked access, and there were no rate limits or quotas." }
+      ],
+      results: [["tests", "223 in 49 classes"], ["capacity", "3,000 active users on 4 CPUs"], ["delivery", "318,326 / 318,683 tracked · none lost, none twice"], ["reads", "page of 40 in 0.2 ms over 9.9M messages"]],
+      status: "Backend and mobile app working on the local stack; single instance for now (LISTEN/NOTIFY planned), phone push and object storage not yet done."
+    } },
+  { id: "sululu", dir: "asata", file: "sululu/", lang: "Java · Spring Boot",
+    title: "Sululu — notification service", year: "2026", tag: "notifications", repo: "private",
+    desc: "Multi-tenant notification service: email, in-app and push through one API, with ordered, idempotent, fully traced delivery.",
+    study: {
+      pitch: "The notification backbone of Asata. Any product sends email, in-app and push notifications through one HTTP API; each product is a tenant with its own API keys and only ever sees its own data.",
+      solves: "Every product needs notifications that are never lost, never sent twice by accident and arrive in order per recipient, even when the mail provider, the broker or a worker fails. Sululu takes that problem out of each app and solves it once.",
+      architecture: [
+        "Modular monolith: one image, three processes (public API, admin API with provider webhooks, delivery worker), each with its own database login and only the rights it needs.",
+        "Accept → relay → deliver: a notification, one delivery per channel and an outbox event are committed in one transaction; a relay publishes the outbox to NATS JetStream; durable pull consumers per channel deliver over SMTP, the in-app inbox or FCM.",
+        "PostgreSQL is the source of truth, the broker only distributes wake-ups: retries, expired leases, lane sweeping and retention all run from the database, so the API keeps accepting while NATS is down.",
+        "Row-level security on every table, API keys stored as SHA-256 and checked through SECURITY DEFINER functions, one circuit breaker per provider, quarantine for poison deliveries, bounded retries with jittered backoff.",
+        "Prometheus metrics with 13 unit-tested alert rules, ECS structured logs with correlation ids, OpenTelemetry traces from the request to the delivery."
+      ],
+      stack: ["Java 25", "Spring Boot 4.1", "Spring Data JPA · Hibernate 7", "PostgreSQL 17", "NATS JetStream", "Spring Security", "MapStruct", "OpenTelemetry", "Prometheus", "Testcontainers", "k6", "Docker Compose", "Caddy", "GitHub Actions"],
+      challenges: [
+        { q: "Keep deliveries in order per recipient with many workers, redeliveries and restarts.",
+          a: "Each notification takes a sequence number under a row lock; a worker claims a delivery with a single conditional UPDATE that only succeeds if it is the head of its lane. Verified by tests running 12 workers over shuffled, duplicated wake-ups with injected faults; a mutation test proves the guard matters." },
+        { q: "SMTP and FCM have no idempotency key: a timeout after sending is ambiguous.",
+          a: "Such outcomes become `unknown` and are never retried blindly; an operator replays them. Processing is at-least-once with durable deduplication, and the documentation says so instead of claiming exactly-once." },
+        { q: "The first load test reached only ~380 of 1,000 req/s, bound by PostgreSQL WAL writes (p95 7.3 s, 41% timeouts).",
+          a: "Profiled the wait events, cut the statements per notification from ~31 to ~14, collapsed the claim into one UPDATE, dropped indexes and added fail-fast overload protection. Result: 1,000 req/s sustained for 5 minutes with p95 at 53 ms." },
+        { q: "A flood of fake API keys could exhaust the database pool.",
+          a: "Key ids are cached in memory and at most 4 credential reads run concurrently. The worker's login was removed from the API process and the admin API moved to its own process." }
+      ],
+      results: [["tests", "101 automated"], ["throughput", "1,000 req/s sustained · p95 52.8 ms"], ["drain", "~2,960 deliveries/s"], ["integrity", "0 ordering violations · 0 duplicates over ~1.8M deliveries"]],
+      status: "Working end-to-end on Docker Compose with load tests and runbooks; not yet on the production server, single node, push through FCM only."
+    } },
+
   /* ---- ai/deep_learning ---- */
   { id: "dnn-debugging", dir: "ai/deep_learning", file: "dnn_debugging.py", lang: "Python",
     title: "Mining a DNN's blind spots", year: "2021", tag: "INRIA · HyAIAI",

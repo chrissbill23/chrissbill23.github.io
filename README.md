@@ -1,7 +1,11 @@
 # chrissbill23.github.io — V2
 
 Personal website of Christian Bile, live at <https://chrissbill23.github.io>.
-Static HTML/CSS/JS, no build step — push to `master` and GitHub Pages serves it.
+Static HTML/CSS/JS. Nothing to build to work on it: open any page and it renders
+itself from `js/data/*.js`. On push to `master`, the "Publish site" GitHub Action
+runs `build.js`, which pre-renders the four pages with jsdom (so crawlers and link
+previews see the content without JavaScript) and publishes `_site/` to GitHub Pages.
+To check the pre-rendered output locally: `npm ci && npm run build`.
 
 ## Pages
 

@@ -1,0 +1,11 @@
+{
+  "name": "chrissbill23.github.io",
+  "private": true,
+  "description": "Pre-render step for the portfolio; the site itself needs no build to be developed.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
+}

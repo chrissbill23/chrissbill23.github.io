@@ -504,6 +504,9 @@
           '<div class="ssum">' + [['problem', st.solves], ['who uses it', st.users], ['what I built', st.built], ['status', st.status]].map(function (r) {
             return r[1] ? '<div class="srw"><span class="k">' + esc(r[0]) + '</span><span class="v">' + esc(r[1]) + '</span></div>' : '';
           }).join('') + '</div>' +
+          '<button type="button" class="sexpand" aria-expanded="false" aria-controls="d-' + esc(p.id) + '">' +
+            '<span class="g">$ </span><span class="more">read --full</span><span class="less">read --less</span>' + ic('chevron-down') + '</button>' +
+          '<div class="sdetail" id="d-' + esc(p.id) + '">' +
           '<div class="sgrid">' +
             '<div class="scol"><section><div class="sh">## stack</div><div class="chips">' + (st.stack || []).map(function (t) { return '<span class="chip">' + esc(t) + '</span>'; }).join('') + '</div></section></div>' +
             '<section><div class="sh">## architecture</div><ul>' + (st.architecture || []).map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ul></section>' +
@@ -515,6 +518,7 @@
             '<div class="kvs">' + (st.results || []).map(function (r) {
               return '<span class="kv"><span class="faint">&gt;&gt;&gt; </span><span class="cy">' + esc(r[0]) + '</span><span class="faint"> = </span><span class="am b">' + esc(r[1]) + '</span></span>';
             }).join('') + '</div>' +
+          '</div>' +
           '</div>' +
         '</div>' +
       '</article>';
@@ -573,12 +577,29 @@
     if (sw && qi) sw.addEventListener('click', function () { qi.focus(); });
     var dirs = $('#dirs');
     if (dirs) dirs.addEventListener('click', function (ev) {
+      var tg = ev.target.closest('.sexpand');
+      if (tg) {
+        var art = tg.closest('.study'), open = !art.classList.contains('is-open');
+        art.classList.toggle('is-open', open); tg.setAttribute('aria-expanded', String(open));
+        if (!open) art.scrollIntoView({ block: 'start' });
+        return;
+      }
       if (!ev.target.closest('#reset-prj')) return;
       state.sel = { kind: 'all' }; state.q = ''; if (qi) qi.value = ''; if (sw) sw.classList.remove('has-text'); update();
     });
+    function openHashStudy() {
+      var h = location.hash.replace(/^#/, ''), art = h ? document.getElementById(h) : null;
+      if (art && art.classList.contains('study')) {
+        art.classList.add('is-open');
+        var b = art.querySelector('.sexpand'); if (b) b.setAttribute('aria-expanded', 'true');
+        art.scrollIntoView({ block: 'start' });
+      }
+    }
+    window.addEventListener('hashchange', openHashStudy);
     var qp = new URLSearchParams(location.search).get('q');
     if (qp && qi) { qi.value = qp; state.q = qp; if (sw) sw.classList.add('has-text'); }
     update();
+    openHashStudy();
   }
 
   /* ================================================================

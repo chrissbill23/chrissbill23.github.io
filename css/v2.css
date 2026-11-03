@@ -620,6 +620,19 @@ svg.lucide { width: var(--i, 16px); height: var(--i, 16px); flex: none; stroke-w
 .srw { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px; font-size: 13px; line-height: 1.65; }
 .srw .k { color: var(--c); font-weight: 700; }
 .srw .v { color: var(--dim); }
+.sexpand {
+  justify-self: start; display: inline-flex; align-items: center; gap: 8px;
+  height: 34px; padding: 0 14px; border: 1px solid var(--line); border-radius: 4px;
+  background: var(--panel-2); font-size: 13px; color: var(--text); transition: border-color .15s ease;
+}
+.sexpand:hover { border-color: var(--c); }
+.sexpand .lucide { --i: 14px; color: var(--c); transition: transform .2s ease; }
+.sexpand .less, .study.is-open .sexpand .more { display: none; }
+.study.is-open .sexpand .less { display: inline; }
+.study.is-open .sexpand .lucide { transform: rotate(180deg); }
+.sdetail { display: none; }
+.study.is-open .sdetail { display: grid; gap: 22px; }
+.study { scroll-margin-top: 80px; }
 .scol { display: grid; gap: 22px; align-content: start; }
 .study .sh { font-size: 13px; font-weight: 700; color: var(--cyan); margin-bottom: 10px; }
 .study section p, .study section li { font-size: 13px; line-height: 1.7; color: var(--dim); }

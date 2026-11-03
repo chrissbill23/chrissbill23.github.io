@@ -63,7 +63,7 @@ SITE.profile = {
     { key: "years_exp", value: "5+", desc: "production engineering", color: "green" },
     { key: "roles", value: "11", desc: "industry + research labs", color: "cyan" },
     { key: "degrees", value: "2", desc: "Bachelor CS · Master AI", color: "violet" },
-    { key: "projects", value: "20+", desc: "Web · ML · CV · RL", color: "amber" },
+    { key: "projects", value: "27", desc: "4 products · 23 side builds", color: "amber" },
     { key: "countries", value: "2", desc: "Italy → France", color: "pink" }
   ],
 

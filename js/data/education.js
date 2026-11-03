@@ -33,6 +33,7 @@ SITE.education = [
   {
     degree: "High School Diploma — Economics & Finance",
     school: "ITE Riccati-Luzzatti", place: "Treviso, IT",
-    years: [2010, 2013]
+    years: [2010, 2013],
+    focus: ["business-management", "finance", "law"]
   }
 ];

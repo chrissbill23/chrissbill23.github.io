@@ -176,7 +176,7 @@ SITE.projects = [
         "Spring Boot backend split into 24 modules (auth, team, app info, environment, role, version, SCM connection, pipeline, webhook, deployment, tracker, notification, platform, console, CDN…), each with an API interface, controller, services and JPA entities.",
         "GitHub Actions and GitLab CI pipelines arrive by signed webhooks (HMAC, constant-time comparison, each delivery processed once) with a 5-minute sync as safety net; deployments start the repository's own deploy workflow and a reconciler follows the run.",
         "Angular 21 frontend on PrimeNG, signals for state, routes and sidebar driven by the user's permissions; 66 tracker screens and 16 deployment screens designed in Pencil for laptop, ultrawide and phone, light and dark.",
-        "JWT access tokens (15 min), refresh tokens stored hashed and rotated, optional Google OAuth2, permissions re-read per team on every request; connection secrets encrypted with AES-256-GCM, only the last 4 characters ever shown.",
+        "Short-lived access tokens, refresh tokens stored hashed and rotated, optional Google sign-in, permissions re-read per team on every request; connection secrets encrypted with AES-256-GCM, only the last 4 characters ever shown.",
         "Shared PostgreSQL database (47 mokili_* tables) backed up with pgBackRest: WAL archiving, weekly full and daily differential, AES-256, weekly automated restore drill. Logos over 100 KB go to S3 (MinIO locally)."
       ],
       stack: ["Java 25", "Spring Boot 4", "Spring Security · OAuth2", "Spring Data JPA", "PostgreSQL 17", "Angular 21", "PrimeNG", "ApexCharts", "TypeScript 5.9", "S3 · MinIO", "Testcontainers", "Docker Compose", "nginx", "GitHub Actions", "pgBackRest"],
@@ -199,19 +199,19 @@ SITE.projects = [
     title: "Umoja — organizations, teams & identity", year: "2026", tag: "identity & teams", repo: "private",
     desc: "SaaS where organizations manage people, hierarchical teams, app access, roles, approval workflows and billing; it also issues the tokens the other Asata services trust.",
     study: {
-      pitch: "The identity and organization hub of Asata. Companies, administrations and associations manage their people, hierarchical teams, access to applications, roles and permissions, approval requests, offices and rooms, agenda and billing. Umoja also issues the access tokens that Oro and the other services trust.",
+      pitch: "The identity and organization hub of Asata. Companies, administrations and associations manage their people, hierarchical teams, access to applications, roles and permissions, approval requests, offices and rooms, agenda and billing. Umoja is also the single sign-on that Oro and the other services rely on.",
       solves: "Every B2B product needs the same unglamorous core: who belongs to which organization and team, who may do what, how access is requested and approved, and who gets invoiced. Umoja builds it once, isolated per organization, so each product only has to plug in.",
       architecture: [
         "Spring Boot backend at /umoja behind nginx, which proxies Oro on the same origin (no CORS); Caddy in front in production for HTTPS, HSTS, security headers and SSE flushing.",
         "Angular 21 frontend with standalone components and signals: an employee side (my apps, my teams, requests, agenda, messages, notifications, profile), an organization admin console, and a platform-staff area with the app marketplace and pricing plans per country.",
         "31 umoja_* tables on the shared PostgreSQL schema: hierarchical teams, memberships with lifecycle states, service-scoped roles, resource:action permissions, configurable request types with approval chains, audit log, subscriptions and invoices.",
-        "Auth: bcrypt passwords, RS256 JWT access tokens (15 min) with a published JWKS and key rotation, refresh tokens in an HttpOnly cookie stored as SHA-256 and rotated per family, lockout after 5 failed attempts.",
+        "Auth: hashed passwords, short-lived access tokens verified by the other services without any shared secret, refresh tokens kept in a secure cookie, stored hashed and rotated, lockout after repeated failed attempts.",
         "Integration: membership snapshots pushed to Oro, notifications through Sululu from a transactional outbox (localized en · fr · es · pt), a live bell fanned out to browsers over SSE, S3-compatible CDN for media, OpenStreetMap address autocomplete."
       ],
       stack: ["Java 25", "Spring Boot 4.1", "Spring Security · OAuth2", "Spring Data JPA", "PostgreSQL 17", "Angular 21", "PrimeNG 21", "TypeScript 5.9", "RxJS", "Vitest", "Testcontainers", "AWS S3 SDK", "Docker Compose", "nginx", "Caddy"],
       challenges: [
         { q: "Let other services trust Umoja's users without sharing a secret.",
-          a: "Moved from a shared HS256 secret to RS256 tokens with a JWKS endpoint, audience checks and rotatable keys. Oro verifies tokens and holds nothing that could sign one." },
+          a: "Replaced a shared secret with signed tokens that other services verify through a public key, with audience checks and key rotation. Oro can verify a token but holds nothing that could issue one." },
         { q: "A stolen refresh token must not give lasting access.",
           a: "Tokens are stored hashed, rotated inside a family, and any reuse of a replaced token revokes the whole family, with a 30 s grace so two tabs refreshing at once do not lock the user out." },
         { q: "Oro must never re-grant an access that Umoja revoked, even if a sync arrives late.",
@@ -236,7 +236,7 @@ SITE.projects = [
         "Product isolation in the schema itself: every row carries a product id and every reference is a composite foreign key, so the database keeps an Oro user out of a Umoja conversation.",
         "Transactional outbox → in-memory LiveHub → one SSE stream per user, each with its own bounded queue and virtual-thread writer; events carry ids only and clients re-read content through the API.",
         "Attachments: type sniffed from the bytes with Apache Tika, EXIF stripped, ClamAV scan that fails closed, purge job and restic backups. Web Push (RFC 8291 / 8292) implemented with the JDK only.",
-        "Identity: Umoja users verified through its JWKS; Oro's own accounts sign RS256 tokens with rotated refresh tokens (cookie for browsers, Keychain / Keystore for the app). Prometheus + Alertmanager with 20 alert rules, ECS logs that never hold message text.",
+        "Identity: Umoja users verified through Umoja's public key; Oro's own accounts use short-lived access tokens and rotated refresh tokens (secure cookie for browsers, Keychain / Keystore for the app). Prometheus + Alertmanager with 20 alert rules, ECS logs that never hold message text.",
         "Mobile app in Expo / React Native with expo-router, TanStack Query and FlashList, designed in Pencil for light and dark themes."
       ],
       stack: ["Java 25", "Spring Boot 4.1", "PostgreSQL 17", "Spring Security", "SSE", "Web Push", "Apache Tika", "ClamAV", "React Native 0.88", "Expo 58", "React 19", "TypeScript", "TanStack Query", "Testcontainers", "k6", "Java Flight Recorder", "Prometheus", "Alertmanager", "Caddy", "GitHub Actions"],

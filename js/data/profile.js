@@ -68,22 +68,22 @@ SITE.profile = {
      with the copy used by the home cards */
   featuredProjects: [
     {
-      id: "asl", file: "sign_language_rt.py", color: "green", cat: "COMPUTER VISION",
-      title: "American Sign Language translator",
-      desc: "Real-time desktop app recognising sign letters from a webcam stream with a classifier trained end-to-end.",
-      metric: { key: "f1_score", value: "0.93", kind: "num" }
+      id: "mokili", file: "mokili/README.md", color: "green", cat: "ASATA · DEVOPS CONSOLE", href: "projects.html#p-mokili",
+      title: "Mokili — applications manager",
+      desc: "Where a team keeps its apps, versions and repositories, follows CI pipelines, launches deployments and runs its Scrum board. Java 25 / Spring Boot 4, Angular 21.",
+      metric: { key: "tests", value: "305", kind: "num" }
     },
     {
-      id: "dnn-debugging", file: "dnn_debugger.py", color: "violet", cat: "DEEP LEARNING · INRIA",
-      title: "Mining a network's blind spots",
-      desc: "Data-mining framework that links groups of neurons to wrong classifications, flagging mispredictions before they happen.",
-      metric: { key: "venue", value: "\"INRIA\"", kind: "str" }
+      id: "umoja", file: "umoja/README.md", color: "cyan", cat: "ASATA · IDENTITY & TEAMS", href: "projects.html#p-umoja",
+      title: "Umoja — organizations & identity",
+      desc: "Organizations manage people, teams, app access, roles, approval workflows and billing; it is also the single sign-on the other services rely on.",
+      metric: { key: "tests", value: "457", kind: "num" }
     },
     {
-      id: "cltv", file: "cltv_forecast.ipynb", color: "cyan", cat: "ML · AMADEUS",
-      title: "Customer Lifetime Value",
-      desc: "ML & DL models predicting an airline's future high-value travellers from profile and purchase behaviour.",
-      metric: { key: "domain", value: "\"travel\"", kind: "str" }
+      id: "oro", file: "oro/README.md", color: "violet", cat: "ASATA · MESSAGING", href: "projects.html#p-oro",
+      title: "Oro — real-time messaging",
+      desc: "Privacy-first chat shared by two products: strict ordering, live streams over SSE, Web Push, malware-scanned attachments and an iOS/Android app.",
+      metric: { key: "active_users", value: "3,000", kind: "num" }
     }
   ],
 
@@ -132,7 +132,7 @@ SITE.profile = {
     lines: [
       { kind: "h1", text: "# Christian Bile" },
       { kind: "blank" },
-      { kind: "h2", text: "## TL;DR" },
+      { kind: "h2", text: "## In short" },
       { kind: "li", text: "- Software & AI engineer · 5+ years in production" },
       { kind: "li", text: "- Now @ Latitude (Reims): the SaaS that configures, builds" },
       { kind: "li", text: "  and launches a European small-sat rocket — Java/Spring Boot, React" },

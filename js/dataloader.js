@@ -250,8 +250,9 @@
       var m = f.metric || {};
       return '<article class="pcard ' + cls(f.color) + '">' +
         '<div class="ptab"><span class="file">' + ic('file-code') + esc(f.file || p.file) + '</span>' +
-          (p.url ? '<a class="open" href="' + esc(p.url) + '" target="_blank" rel="noopener" aria-label="Open ' + esc(f.title) + '">' + ic('arrow-up-right') + '</a>'
-                 : '<a class="open" href="projects.html" aria-label="All projects">' + ic('arrow-up-right') + '</a>') + '</div>' +
+          (f.href ? '<a class="open" href="' + esc(f.href) + '" aria-label="Read about ' + esc(f.title) + '">' + ic('arrow-up-right') + '</a>'
+           : p.url ? '<a class="open" href="' + esc(p.url) + '" target="_blank" rel="noopener" aria-label="Open ' + esc(f.title) + '">' + ic('arrow-up-right') + '</a>'
+                   : '<a class="open" href="projects.html" aria-label="All projects">' + ic('arrow-up-right') + '</a>') + '</div>' +
         '<div class="pcard-body"><div class="cat"># ' + esc(f.cat) + '</div><h3>' + esc(f.title || p.title) + '</h3><p>' + esc(f.desc || p.desc) + '</p>' +
           '<div class="mline"><span class="faint">&gt;&gt;&gt; </span><span class="cy">' + esc(m.key) + '</span><span class="faint"> = </span>' +
           '<span class="' + (m.kind === 'num' ? 'pk' : 'am') + ' b">' + esc(m.value) + '</span></div></div>' +
@@ -609,7 +610,7 @@
           return '<div class="srow"><span class="lbl">' + esc(it[0]) + '</span><span class="bar"><span class="fill">' + new Array(n + 1).join('█') + '</span><span class="rest">' + new Array(20 - n + 1).join('░') + '</span></span><span class="val">' + it[1].toFixed(2) + '</span></div>';
         }).join('') + '</div></div>';
     }
-    var sk = $('#skills'); if (sk) sk.innerHTML = win(SK.ai) + win(SK.eng);
+    var sk = $('#skills'); if (sk) sk.innerHTML = win(SK.eng) + win(SK.ai);
     var also = $('#also');
     if (also) also.innerHTML = '<div class="lbl"># also used in production:</div><div class="chips">' +
       (SK.alsoShipped || []).map(function (t) { return '<span class="chip c-cyan">' + esc(t) + '</span>'; }).join('') + '</div>';

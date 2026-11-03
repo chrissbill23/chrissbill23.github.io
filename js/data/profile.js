@@ -13,6 +13,12 @@ SITE.profile = {
   roles: ["Software Engineer - Distributed Systems", "AI"],
   openToWork: true,
   resume: "en_cv_Bile_Christian.pdf",
+  /* [code, file, label] — all offered from the nav button and the contact terminal */
+  resumes: [
+    ["en", "en_cv_Bile_Christian.pdf", "English"],
+    ["fr", "fr_cv_Bile_Christian.pdf", "Français"],
+    ["it", "it_cv_Bile_Christian.pdf", "Italiano"]
+  ],
   email: "christian2tv@gmail.com",
   github: "https://github.com/chrissbill23",
   githubLabel: "github.com/chrissbill23",
@@ -28,7 +34,7 @@ SITE.profile = {
     boot: [
       { t: "0.000", msg: "starting christian.v5" },
       { t: "0.041", msg: "loading education  master_ai_polytechnique · bachelor_cs_padova", ok: true },
-      { t: "0.087", msg: "loading experience  12 roles · 5+ years", ok: true },
+      { t: "0.087", msg: "loading experience  11 roles · 5+ years", ok: true },
       { t: "0.112", msg: "loading skills  java python typescript react c++ pytorch", ok: true }
     ],
     bio:
@@ -55,7 +61,7 @@ SITE.profile = {
 
   metrics: [
     { key: "years_exp", value: "5+", desc: "production engineering", color: "green" },
-    { key: "roles", value: "12", desc: "industry + research labs", color: "cyan" },
+    { key: "roles", value: "11", desc: "industry + research labs", color: "cyan" },
     { key: "degrees", value: "2", desc: "Bachelor CS · Master AI", color: "violet" },
     { key: "projects", value: "20+", desc: "Web · ML · CV · RL", color: "amber" },
     { key: "countries", value: "2", desc: "Italy → France", color: "pink" }
@@ -83,7 +89,7 @@ SITE.profile = {
       id: "oro", file: "oro/README.md", color: "violet", cat: "ASATA · MESSAGING", href: "projects.html#p-oro",
       title: "Oro — real-time messaging",
       desc: "Privacy-first chat shared by two products: strict ordering, live streams over SSE, Web Push, malware-scanned attachments and an iOS/Android app.",
-      metric: { key: "active_users", value: "3,000", kind: "num" }
+      metric: { key: "load_tested", value: "3,000 concurrent users", kind: "str" }
     }
   ],
 
@@ -106,6 +112,7 @@ SITE.profile = {
     command: { cmd: "./contact.sh ", flag: "--role ", value: "\"software|ml|ai engineer\"" },
     rows: [
       ["email", "christian2tv@gmail.com"],
+      ["resume", "en · fr · it"],
       ["github", "github.com/chrissbill23"],
       ["web", "chrissbill23.github.io"],
       ["based_in", "European Union 🇪🇺"],

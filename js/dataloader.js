@@ -82,7 +82,14 @@
         '</nav></div>' +
         '<div class="nav-right">' +
           (P.openToWork ? '<span class="status"><i class="dot"></i><span>open_to_work=Yes</span></span>' : '') +
-          '<a class="btn btn-green btn-sm" href="' + esc(P.resume) + '" download aria-label="Download resume">' + ic('download') + '<span>resume.pdf</span></a>' +
+          '<div class="resume-wrap">' +
+            '<a class="btn btn-green btn-sm" href="' + esc(P.resume) + '" download aria-label="Download resume (English)" aria-haspopup="true">' + ic('download') + '<span>resume.pdf</span></a>' +
+            (P.resumes && P.resumes.length ? '<div class="resume-menu" role="menu" aria-label="Resume languages">' +
+              '<div class="rm-head">$ resume --lang</div>' +
+              P.resumes.map(function (r) {
+                return '<a role="menuitem" href="' + esc(r[1]) + '" download>' + ic('file-text') + '<span class="code">' + esc(r[0]) + '</span><span>' + esc(r[2]) + '</span></a>';
+              }).join('') + '</div>' : '') +
+          '</div>' +
         '</div>' +
       '</div>';
     watchTabsOverflow(el.querySelector('.tabs'));
@@ -121,6 +128,9 @@
       if (key === 'email') return '<a href="mailto:' + esc(val) + '">' + esc(val) + '</a>';
       if (key === 'github') return '<a href="' + esc(P.github) + '" target="_blank" rel="noopener">' + esc(val) + '</a>';
       if (key === 'web') return '<a href="https://' + esc(val) + '">' + esc(val) + '</a>';
+      if (key === 'resume' && P.resumes) return P.resumes.map(function (r) {
+        return '<a href="' + esc(r[1]) + '" download title="' + esc(r[2]) + '">' + esc(r[0]) + '.pdf</a>';
+      }).join('<span class="faint"> · </span>');
       return esc(val);
     }
     var rows = (C.rows || []).map(function (r) {
@@ -491,9 +501,11 @@
         '<div class="sbody">' +
           '<div class="shd"><h3>' + esc(p.title) + '</h3><span class="tag">' + esc(p.tag) + '</span><span class="meta">' + esc(p.year) + '</span>' + link + '</div>' +
           '<p class="pitch">' + esc(st.pitch || p.desc) + '</p>' +
+          '<div class="ssum">' + [['problem', st.solves], ['who uses it', st.users], ['what I built', st.built], ['status', st.status]].map(function (r) {
+            return r[1] ? '<div class="srw"><span class="k">' + esc(r[0]) + '</span><span class="v">' + esc(r[1]) + '</span></div>' : '';
+          }).join('') + '</div>' +
           '<div class="sgrid">' +
-            '<div class="scol"><section><div class="sh">## what_it_solves</div><p>' + esc(st.solves) + '</p></section>' +
-              '<section><div class="sh">## stack</div><div class="chips">' + (st.stack || []).map(function (t) { return '<span class="chip">' + esc(t) + '</span>'; }).join('') + '</div></section></div>' +
+            '<div class="scol"><section><div class="sh">## stack</div><div class="chips">' + (st.stack || []).map(function (t) { return '<span class="chip">' + esc(t) + '</span>'; }).join('') + '</div></section></div>' +
             '<section><div class="sh">## architecture</div><ul>' + (st.architecture || []).map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ul></section>' +
           '</div>' +
           '<section><div class="sh">## challenges → how I solved them</div><div class="chals">' + (st.challenges || []).map(function (c) {
@@ -503,7 +515,6 @@
             '<div class="kvs">' + (st.results || []).map(function (r) {
               return '<span class="kv"><span class="faint">&gt;&gt;&gt; </span><span class="cy">' + esc(r[0]) + '</span><span class="faint"> = </span><span class="am b">' + esc(r[1]) + '</span></span>';
             }).join('') + '</div>' +
-            (st.status ? '<div class="sstatus"><span class="faint"># status: </span>' + esc(st.status) + '</div>' : '') +
           '</div>' +
         '</div>' +
       '</article>';

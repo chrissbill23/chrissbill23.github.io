@@ -15,8 +15,8 @@
      file      the "filename" shown in the card tab
      url       GitHub (or other) link; omit if private
      repo      "private" shows "private repo" in place of a link
-     study     { pitch, solves, architecture[], stack[], challenges[{q,a}],
-               results[[k,v]], status } -> full-width case-study card
+     study     { pitch, solves, users, built, status, architecture[], stack[],
+               challenges[{q,a}], results[[k,v]] } -> full-width case-study card
    ------------------------------------------------------------------ */
 window.SITE = window.SITE || {};
 
@@ -58,20 +58,12 @@ SITE.experience = [
     }
   },
   {
-    id: "epigone", hash: "5d07b1c", branch: "consulting",
-    company: "Epigone", role: "IT Consultant",
-    start: "2024-02", end: null, location: "Paris, France",
-    desc: "Epigone was acquired by Adentis, so I joined as an IT consultant designing and building IT solutions for medium and large clients. First mission: AG2R La Mondiale.",
-    tech: [],
-    stack: ["Solution design", "Consulting"]
-  },
-  {
     id: "adentis", hash: "e44c90a", branch: "consulting",
-    company: "Adentis", role: "IT Consultant",
+    company: "Adentis & Epigone", role: "Software Engineering Consultant",
     start: "2023-09", end: null, location: "Paris, France",
-    desc: "Designing and building IT solutions for medium and large enterprise clients as part of the Adentis consulting group.",
+    desc: "Software engineering consultant across the shared consulting operations of Adentis and Epigone (Epigone joined the Adentis group): design and delivery of software solutions for enterprise clients. Client assignments so far: AG2R La Mondiale (March 2024 – April 2026) and Latitude (September 2026 – present), each detailed above.",
     tech: [],
-    stack: ["Consulting", "Architecture"]
+    stack: ["Solution design", "Consulting", "Enterprise clients"]
   },
   {
     id: "ike", hash: "b21f6e8", branch: "freelance",
@@ -172,6 +164,8 @@ SITE.projects = [
     study: {
       pitch: "The applications manager of Asata, and the catalogue the suite itself is registered in. A team keeps its applications, environments, roles, versions and source repositories in one place, and from there follows CI pipelines, streams job logs, launches deployments and runs a Scrum tracker.",
       solves: "Small teams scatter the lifecycle of their software across GitHub, GitLab, spreadsheets and chat. Mokili ties application → version → repository → pipeline → deployment → environment into one traceable chain, scoped per team, with notifications when something lands.",
+      users: "Engineering teams and their managers, from a two-person startup to a department; it is also the catalogue the Asata suite itself is registered in.",
+      built: "Everything: the backend (24 modules), the Angular web app, the GitHub and GitLab integrations, the deployment and tracker features, the database schema, CI and backups. Screens designed in Pencil.",
       architecture: [
         "Spring Boot backend split into 24 modules (auth, team, app info, environment, role, version, SCM connection, pipeline, webhook, deployment, tracker, notification, platform, console, CDN…), each with an API interface, controller, services and JPA entities.",
         "GitHub Actions and GitLab CI pipelines arrive by signed webhooks (HMAC, constant-time comparison, each delivery processed once) with a 5-minute sync as safety net; deployments start the repository's own deploy workflow and a reconciler follows the run.",
@@ -201,6 +195,8 @@ SITE.projects = [
     study: {
       pitch: "The identity and organization hub of Asata. Companies, administrations and associations manage their people, hierarchical teams, access to applications, roles and permissions, approval requests, offices and rooms, agenda and billing. Umoja is also the single sign-on that Oro and the other services rely on.",
       solves: "Every B2B product needs the same unglamorous core: who belongs to which organization and team, who may do what, how access is requested and approved, and who gets invoiced. Umoja builds it once, isolated per organization, so each product only has to plug in.",
+      users: "Companies, administrations and associations: their employees on one side, their administrators on the other. The other Asata products plug into it for sign-on and team membership.",
+      built: "The whole product: backend, Angular web app, data model (31 tables), sign-on and account security, approval workflows, billing, and the integrations with Oro and Sululu.",
       architecture: [
         "Spring Boot backend at /umoja behind nginx, which proxies Oro on the same origin (no CORS); Caddy in front in production for HTTPS, HSTS, security headers and SSE flushing.",
         "Angular 21 frontend with standalone components and signals: an employee side (my apps, my teams, requests, agenda, messages, notifications, profile), an organization admin console, and a platform-staff area with the app marketplace and pricing plans per country.",
@@ -231,6 +227,8 @@ SITE.projects = [
     study: {
       pitch: "The messaging service of Asata, shared by two products: Oro for personal messaging (friends, family groups, communities) and Umoja for workplace messaging (direct messages, groups, one chat per team). Real-time over Server-Sent Events, Web Push notifications, and a mobile app for iOS and Android.",
       solves: "Chat looks simple and is not: strict message order, retries that never duplicate, receipts, catching up after being offline, thousands of open streams, files that may carry malware, and privacy rules (requests from strangers, blocks, no history for newcomers, GDPR export and erasure). Oro solves all of that once, for both products.",
+      users: "People, for personal chat with friends, family and communities; and organizations on Umoja, for workplace messaging with one chat per team.",
+      built: "Backend, database schema and security model, real-time streaming, push notifications, attachment scanning, the iOS/Android app, load tests, monitoring and runbooks.",
       architecture: [
         "One Spring Boot service at /oro over the shared PostgreSQL 17 database: 16 tables, 27 row-level-security policies, 16 triggers and 21 functions in plain SQL with a versioned migration runner.",
         "Product isolation in the schema itself: every row carries a product id and every reference is a composite foreign key, so the database keeps an Oro user out of a Umoja conversation.",
@@ -244,7 +242,7 @@ SITE.projects = [
         { q: "Strict order and safe retries inside a conversation.",
           a: "Each send locks the conversation row and takes the next sequence number, so there are no gaps and no reordering. A client message id is unique per sender and conversation, so a retry, even a concurrent one, returns the stored message. Receipts are positions, not per-message rows." },
         { q: "Catching up after disconnects and restarts without replaying events.",
-          a: "Every stream `hello` makes the client re-read what changed since its last sequence. Under load, a restart lost none of ~58,000 messages and 300 of 300 tracked clients caught up." },
+          a: "Every stream `hello` makes the client re-read what changed since its last sequence. In a load test, a restart lost none of ~58,000 generated messages and 300 of 300 simulated clients caught up." },
         { q: "Message search took 5 s for a heavy user: ILIKE is not leakproof under row-level security, so the trigram index was skipped.",
           a: "A SECURITY DEFINER search function re-applies the RLS rule and uses the index: 5,030 ms → 663 ms for a power user, 16 ms → 2 ms for a typical one." },
         { q: "A graceful stop took over 45 s and one slow client could block everyone.",
@@ -252,7 +250,7 @@ SITE.projects = [
         { q: "A security self-audit found 10 confirmed defects.",
           a: "All fixed: the API login could escalate to the system role, internal endpoints were reachable from the internet, streams outlived revoked tokens, interleaved syncs could restore revoked access, and there were no rate limits or quotas." }
       ],
-      results: [["tests", "223 in 49 classes"], ["capacity", "3,000 active users on 4 CPUs"], ["delivery", "318,326 / 318,683 tracked · none lost, none twice"], ["reads", "page of 40 in 0.2 ms over 9.9M messages"]],
+      results: [["tests", "223 in 49 classes"], ["load test", "3,000 concurrent simulated users on 4 CPUs"], ["load-test delivery", "318,326 / 318,683 tracked · none lost, none twice"], ["query plans", "page of 40 in 0.2 ms over 9.9M generated messages"]],
       status: "Backend and mobile app working on the local stack; single instance for now (LISTEN/NOTIFY planned), phone push and object storage not yet done."
     } },
   { id: "sululu", dir: "asata", file: "sululu/", lang: "Java · Spring Boot",
@@ -261,6 +259,8 @@ SITE.projects = [
     study: {
       pitch: "The notification backbone of Asata. Any product sends email, in-app and push notifications through one HTTP API; each product is a tenant with its own API keys and only ever sees its own data.",
       solves: "Every product needs notifications that are never lost, never sent twice by accident and arrive in order per recipient, even when the mail provider, the broker or a worker fails. Sululu takes that problem out of each app and solves it once.",
+      users: "The Asata products themselves (Mokili, Umoja, Oro and the next ones), and through them every one of their users.",
+      built: "The whole service: API, delivery workers, queue integration, security model, metrics and alerts, load tests, deployment and runbooks.",
       architecture: [
         "Modular monolith: one image, three processes (public API, admin API with provider webhooks, delivery worker), each with its own database login and only the rights it needs.",
         "Accept → relay → deliver: a notification, one delivery per channel and an outbox event are committed in one transaction; a relay publishes the outbox to NATS JetStream; durable pull consumers per channel deliver over SMTP, the in-app inbox or FCM.",
@@ -275,11 +275,11 @@ SITE.projects = [
         { q: "SMTP and FCM have no idempotency key: a timeout after sending is ambiguous.",
           a: "Such outcomes become `unknown` and are never retried blindly; an operator replays them. Processing is at-least-once with durable deduplication, and the documentation says so instead of claiming exactly-once." },
         { q: "The first load test reached only ~380 of 1,000 req/s, bound by PostgreSQL WAL writes (p95 7.3 s, 41% timeouts).",
-          a: "Profiled the wait events, cut the statements per notification from ~31 to ~14, collapsed the claim into one UPDATE, dropped indexes and added fail-fast overload protection. Result: 1,000 req/s sustained for 5 minutes with p95 at 53 ms." },
+          a: "Profiled the wait events, cut the statements per notification from ~31 to ~14, collapsed the claim into one UPDATE, dropped indexes and added fail-fast overload protection. Result in the load test: 1,000 req/s sustained for 5 minutes with p95 at 53 ms." },
         { q: "A flood of fake API keys could exhaust the database pool.",
           a: "Key ids are cached in memory and at most 4 credential reads run concurrently. The worker's login was removed from the API process and the admin API moved to its own process." }
       ],
-      results: [["tests", "101 automated"], ["throughput", "1,000 req/s sustained · p95 52.8 ms"], ["drain", "~2,960 deliveries/s"], ["integrity", "0 ordering violations · 0 duplicates over ~1.8M deliveries"]],
+      results: [["tests", "101 automated"], ["load test", "1,000 req/s sustained 5 min · p95 52.8 ms"], ["load-test drain", "~2,960 deliveries/s"], ["load-test integrity", "0 ordering violations · 0 duplicates over ~1.8M deliveries"]],
       status: "Working end-to-end on Docker Compose with load tests and runbooks; not yet on the production server, single node, push through FCM only."
     } },
 

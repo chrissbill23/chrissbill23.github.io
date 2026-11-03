@@ -680,15 +680,11 @@ svg.lucide { width: var(--i, 16px); height: var(--i, 16px); flex: none; stroke-w
 .palette i { width: 22px; height: 14px; display: block; }
 
 .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.skillwin .term-body { padding: 22px 24px 26px; display: grid; gap: 9px; font-size: 13px; }
-.pyline { margin-bottom: 6px; }
-.srow { display: grid; grid-template-columns: 150px auto 44px; gap: 10px; align-items: center; white-space: nowrap; }
-.srow .bar { color: var(--c); letter-spacing: -.5px; }
-.srow .rest { opacity: .45; }
-.srow .val { color: var(--pink); font-weight: 700; }
-.also { margin-top: 40px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; }
-.also .lbl { font-size: 13px; color: var(--faint); }
-.also .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.skillwin .term-body { padding: 20px 22px 24px; display: grid; gap: 14px; font-size: 13px; align-content: start; }
+.skillwin .pyline { color: var(--dim); }
+.skillwin .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.skillwin .chip { font-size: 12px; padding: 5px 10px; }
+.skillwin .term-bar .meta span { color: var(--faint); }
 .edurow { display: grid; grid-template-columns: minmax(0, 2.14fr) minmax(0, 1fr); gap: 24px; align-items: start; }
 .yaml .term-body { padding: 22px 24px 26px; }
 .yaml .cl { line-height: 2; }
@@ -759,7 +755,6 @@ svg.lucide { width: var(--i, 16px); height: var(--i, 16px); flex: none; stroke-w
   .commit { grid-template-columns: 1fr; gap: 16px; padding: 24px 20px; }
   .commit .tags { grid-column: 1; }
   .layers { grid-template-columns: 1fr; }
-  .srow { grid-template-columns: 110px auto 44px; font-size: 12px; }
   .shead { flex-direction: column; align-items: flex-start; }
   .titem .top { padding: 8px 16px; }
   .titem .body { padding: 18px 16px 20px; }

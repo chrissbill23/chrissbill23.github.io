@@ -633,19 +633,14 @@
         '</div></div>';
 
     var SK = P.skills || {};
-    function win(w) {
-      if (!w) return '';
-      return '<div class="term skillwin ' + cls(w.color) + '">' + termBar(w.title, '<i class="livedot"></i>running') +
-        '<div class="term-body"><div class="pyline"><span class="faint">&gt;&gt;&gt;  </span>self.rate(domain=\'' + esc(w.domain) + '\')</div>' +
-        (w.items || []).map(function (it) {
-          var n = Math.round(it[1] * 20);
-          return '<div class="srow"><span class="lbl">' + esc(it[0]) + '</span><span class="bar"><span class="fill">' + new Array(n + 1).join('█') + '</span><span class="rest">' + new Array(20 - n + 1).join('░') + '</span></span><span class="val">' + it[1].toFixed(2) + '</span></div>';
-        }).join('') + '</div></div>';
-    }
-    var sk = $('#skills'); if (sk) sk.innerHTML = win(SK.eng) + win(SK.ai);
-    var also = $('#also');
-    if (also) also.innerHTML = '<div class="lbl"># also used in production:</div><div class="chips">' +
-      (SK.alsoShipped || []).map(function (t) { return '<span class="chip c-cyan">' + esc(t) + '</span>'; }).join('') + '</div>';
+    var sk = $('#skills');
+    if (sk) sk.innerHTML = (SK.groups || []).map(function (g) {
+      return '<div class="term skillwin ' + cls(g.color) + '">' + termBar(g.title, '<span>' + g.items.length + ' items</span>') +
+        '<div class="term-body">' +
+          '<div class="pyline"><span class="faint"># </span>' + esc(g.note) + '</div>' +
+          '<div class="chips">' + g.items.map(function (it) { return '<span class="chip">' + esc(it) + '</span>'; }).join('') + '</div>' +
+        '</div></div>';
+    }).join('');
 
     var yl = [];
     EDU.forEach(function (d, i) {

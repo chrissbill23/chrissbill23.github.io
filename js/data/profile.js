@@ -10,7 +10,7 @@ SITE.profile = {
   fullName: "Bile Ezanin Christian Prince Carlos",
   user: "christian",
   host: "bile",
-  roles: ["Software Engineer - Distributed Systems", "AI"],
+  roles: ["Software Engineer", "Distributed Systems & AI"],
   openToWork: true,
   resume: "en_cv_Bile_Christian.pdf",
   /* [code, file, label] — all offered from the nav button and the contact terminal */
@@ -38,10 +38,10 @@ SITE.profile = {
       { t: "0.112", msg: "loading skills  java python typescript react c++ pytorch", ok: true }
     ],
     bio:
-      "Building reliable software products and scalable systems. " +
-      "5+ years shipping Java, Python, C++, React and Angular platforms in "+
-      "insurance, business management, health-tech, aerospace and travel. I have a Master's in AI from " +
-      "École Polytechnique and a Bachelor's in Computer Science from Università di Padova.",
+      "I build reliable software products and scalable systems. 5+ years shipping Java, Python, C++, " +
+      "React and Angular platforms in insurance, business management, health-tech, aerospace and travel, " +
+      "with a Master's in AI from École Polytechnique and a Bachelor's in Computer Science from " +
+      "Università di Padova.",
     primaryCta: { label: "$ ./view --experiences", href: "experience.html" },
     secondaryCta: { label: "open projects/", href: "projects.html" }
   },
@@ -183,29 +183,21 @@ SITE.profile = {
     }
   },
 
+  /* skills grouped by how I use them — no made-up scores */
   skills: {
-    ai: {
-      title: "ai_skills — self-assessed", domain: "ai", color: "violet",
-      items: [
-        ["Deep Learning", 0.93], ["Machine Learning", 0.90], ["Computer Vision", 0.90],
-        ["Reinforcement L.", 0.89], ["Statistics", 0.85], ["NLP", 0.75],
-        ["scikit-learn", 0.98], ["TensorFlow", 0.80], ["PyTorch", 0.69],
-        ["AMPL", 0.70], ["R", 0.65], ["Matlab", 0.60]
-      ]
-    },
-    eng: {
-      title: "engineering_skills — self-assessed", domain: "engineering", color: "green",
-      items: [
-        ["Web Development", 0.97], ["TypeScript", 0.97], ["Software Eng.", 0.95],
-        ["Qt / QML", 0.95], ["SQL (SQLite)", 0.95], ["C++", 0.94],
-        ["JavaScript", 0.94], ["Python", 0.90], ["Java", 0.90],
-        ["Angular", 0.90], ["CI/CD", 0.90], ["Spring Boot", 0.85]
-      ]
-    },
-    alsoShipped: [
-      "Go", "Kubernetes", "Docker", "Jenkins", "GitLab CI/CD", "Kafka", "FastAPI", "Django",
-      "GraphQL", "FHIR", "Node.js", "React", "pandas", "OSRM", "PostgreSQL", "MySQL", "Oracle SQL",
-      "Microsoft SQL Server", "SQLite", "MongoDB", "Databricks", "Azure"
+    groups: [
+      { key: "daily_driver", color: "green", title: "daily_driver.txt",
+        note: "what I write every week right now",
+        items: ["Java 25", "Spring Boot", "PostgreSQL", "React", "TypeScript", "Docker", "GitLab CI/CD", "Git", "Linux"] },
+      { key: "shipped", color: "cyan", title: "shipped_to_production.txt",
+        note: "used on paid work and in the Asata products",
+        items: ["Python", "Angular", "C++", "Qt / QML", "Go", "FastAPI", "Django", "Node.js", "Kubernetes", "Jenkins", "Azure", "MySQL", "SQL Server", "Oracle SQL", "MongoDB", "SQLite", "Databricks", "GraphQL", "FHIR", "pandas", "OSRM", "NATS JetStream", "Prometheus", "OpenTelemetry", "Caddy", "nginx", "S3 / MinIO"] },
+      { key: "practices", color: "amber", title: "how_i_work.txt",
+        note: "the habits behind the code",
+        items: ["System design", "Data modelling", "API design", "Multi-tenancy & RLS", "Transactional outbox", "Automated tests", "Load testing", "Observability", "Runbooks & backups", "Agile / Scrum", "UI design in Pencil"] },
+      { key: "research", color: "violet", title: "research_and_academic.txt",
+        note: "from École Polytechnique, INRIA and side projects",
+        items: ["Deep Learning", "Machine Learning", "Computer Vision", "Reinforcement Learning", "NLP", "Explainable AI", "PyTorch", "TensorFlow", "scikit-learn", "Statistics", "R", "Matlab", "AMPL", "Unity / C#"] }
     ]
   },
 

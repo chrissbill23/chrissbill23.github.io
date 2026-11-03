@@ -10,7 +10,7 @@ SITE.profile = {
   fullName: "Bile Ezanin Christian Prince Carlos",
   user: "christian",
   host: "bile",
-  roles: ["Software", "AI Engineer"],
+  roles: ["Software Engineer - Distributed Systems", "AI"],
   openToWork: true,
   resume: "en_cv_Bile_Christian.pdf",
   email: "christian2tv@gmail.com",
@@ -32,11 +32,11 @@ SITE.profile = {
       { t: "0.112", msg: "importing stack  java python typescript react c++ pytorch", ok: true }
     ],
     bio:
-      "Today I build the internal SaaS that configures, builds and launches rockets at Latitude " +
-      "(Java/Spring Boot, React, PostgreSQL). Before that: 5+ years shipping Java, Python and " +
-      "Angular platforms in insurance, SaaS, health-tech and travel, a Master's in AI from " +
-      "École Polytechnique and deep-learning research at INRIA.",
-    primaryCta: { label: "$ ./view --experience", href: "experience.html" },
+      "Building reliable software products and scalable systems. " +
+      "5+ years shipping Java, Python, C++, React and Angular platforms in "+
+      "insurance, business management, health-tech, aerospace and travel. I have a Master's in AI from " +
+      "École Polytechnique and Bachelor in Computer Science from Università di Padova.",
+    primaryCta: { label: "$ ./view --experiences", href: "experience.html" },
     secondaryCta: { label: "cd projects/", href: "projects.html" }
   },
 
@@ -45,9 +45,9 @@ SITE.profile = {
     role: ["Software Eng", "AI Eng"],
     now: "Latitude · Reims",
     experience_years: 5,
-    education: { msc: "AI @ École Polytechnique", bsc: "CS @ Univ. of Padova" },
-    stack: ["java", "python", "ts", "react"],
-    domains: ["backend", "space", "CV", "NLP"],
+    education: { master: "AI @ École Polytechnique", bachelor: "Computer Science @ Univ. of Padova" },
+    stack: ["java", "python", "angular", "react"],
+    domains: ["backend", "frontend", "software", "applied AI"],
     open_to_work: true
   },
 
@@ -57,7 +57,7 @@ SITE.profile = {
     { key: "years_exp", value: "5+", desc: "production engineering", color: "green" },
     { key: "roles", value: "12", desc: "industry + research labs", color: "cyan" },
     { key: "degrees", value: "2", desc: "BSc CS · MScT AI", color: "violet" },
-    { key: "projects", value: "20+", desc: "ML · CV · RL · web", color: "amber" },
+    { key: "projects", value: "20+", desc: "Web · ML · CV · RL", color: "amber" },
     { key: "countries", value: "2", desc: "Italy → France", color: "pink" }
   ],
 
@@ -88,20 +88,20 @@ SITE.profile = {
   ],
 
   stackLayers: [
-    { name: "layer_0 · Input", sub: "languages", color: "cyan",
-      items: ["Python", "Java", "TypeScript", "C++", "Go", "SQL"] },
-    { name: "layer_1 · Hidden", sub: "frameworks", color: "violet",
-      items: ["Spring Boot", "React", "Angular", "FastAPI", "PyTorch", "scikit-learn"] },
-    { name: "layer_2 · Hidden", sub: "infra", color: "amber",
+    { name: "languages", sub: "layer_0 · Input", color: "cyan",
+      items: ["Python", "Java", "TypeScript", "JavaScript", "C++", "SQL"] },
+    { name: "frameworks", sub: "layer_1 · Hidden", color: "violet",
+      items: ["Spring Boot", "React", "Angular", "FastAPI", "Qt", "PyTorch"] },
+    { name: "infra", sub: "layer_2 · Hidden", color: "amber",
       items: ["Docker", "Kubernetes", "Jenkins", "GitLab CI/CD", "Kafka", "PostgreSQL"] },
-    { name: "layer_3 · Output", sub: "value delivered", color: "green",
-      items: ["Computer Vision", "NLP", "Forecasting", "Back-end platforms", "Data pipelines", "MLOps"] }
+    { name: "value delivered", sub: "layer_3 · Output", color: "green",
+      items: ["Backend", "Frontend", "Distributed Systems", "DevOps", "Applied AI"] }
   ],
 
   /* ---------- footer / contact ---------- */
   contact: {
     headline: ["Let's build", "intelligent", "software."],
-    sub: "Hiring a Software, ML or AI Engineer? Let's talk — Paris on-site, hybrid or remote.",
+    sub: "Hiring a Software, ML or AI Engineer? Let's talk on-site, hybrid or remote.",
     terminalTitle: "contact.sh — zsh",
     command: { cmd: "./contact.sh ", flag: "--role ", value: "\"software|ml|ai engineer\"" },
     rows: [

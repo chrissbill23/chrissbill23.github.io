@@ -81,7 +81,7 @@
           }).join('') +
         '</nav></div>' +
         '<div class="nav-right">' +
-          (P.openToWork ? '<span class="status"><i class="dot"></i><span>open_to_work=True</span></span>' : '') +
+          (P.openToWork ? '<span class="status"><i class="dot"></i><span>open_to_work=Yes</span></span>' : '') +
           '<a class="btn btn-green btn-sm" href="' + esc(P.resume) + '" download aria-label="Download resume">' + ic('download') + '<span>resume.pdf</span></a>' +
         '</div>' +
       '</div>';
@@ -201,7 +201,7 @@
         '<div class="boot">' + (H.boot || []).map(function (b) {
           return '<div><span class="t">[' + esc(pad(b.t, 8)) + ']</span><span>' + esc(b.msg) + '</span>' + (b.ok ? '<span class="ok">[OK]</span>' : '') + '</div>';
         }).join('') + '</div>' +
-        '<div class="prompt"><span class="a">➜</span><span class="d">~</span><span>whoami</span></div>' +
+        '<div class="prompt"><span class="a">➜</span><span class="d">~</span><span>who -am -i</span></div>' +
         '<h1 class="name">' + esc(P.name) + '</h1>' +
         '<div class="role"><span class="cy">' + esc((P.roles || [])[0]) + '</span><span class="amp">&amp;&amp;</span>' +
           '<span class="g">' + esc((P.roles || [])[1]) + '</span><i class="cursor" aria-hidden="true"></i></div>' +
@@ -214,7 +214,7 @@
     if (right) {
       var lines = jsonToLines(P.modelCard || {});
       right.innerHTML =
-        '<div class="term scan model-card">' + termBar('model_card.json', '{ } JSON') +
+        '<div class="term scan model-card">' + termBar('profile_card.json', '{ } JSON') +
           '<div class="term-body code">' + lines.map(function (l, i) {
             return '<div class="cl"><span class="ln">' + pad(i + 1, 2) + '</span>' + l + '</div>';
           }).join('') + '</div>' +
